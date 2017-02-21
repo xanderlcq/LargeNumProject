@@ -38,7 +38,7 @@
     }
 }
 -(void) setDigitAt:(unsigned long long int)index withValue:(int) value{
-    if(value > 9 || value < 0)
+    if(value >= self.base || value < 0)
         [NSException raise:@"set digit value out of bound" format:@"0 <= value <= 9, yours is %i", value];
 
     if(index >= [self.data count])
@@ -58,7 +58,7 @@
 }
 
 -(void) insertDigitAt:(unsigned long long int)index withValue:(int) value{
-    if(value > 9 || value < 0)
+    if(value >= self.base || value < 0)
         [NSException raise:@"set digit value out of bound" format:@"0 <= value <= 9, yours is %i", value];
     if(index > [self.data count])
         [NSException raise:@"insert digit index out of bound" format:@"length of LargeInt: %lu, you're setting at: %llu", (unsigned long)[self.data count],index];
@@ -92,5 +92,96 @@
         return @"0";
     NSEnumerator *en = [self.data reverseObjectEnumerator];
     return [[en allObjects] componentsJoinedByString:@""];
+}
+
+-(BOOL) isGreaterThan:(id)object{
+    if(![object isKindOfClass:[LargeInt class]])
+        [NSException raise:@"Comparing object is not a large int" format:@"it is a : %@", [object className]];
+    [self simplify];
+    [(LargeInt *)object simplify];
+    if([self length] > [(LargeInt *)object length])
+        return YES;
+    if([self length] < [(LargeInt *)object length])
+        return NO;
+    
+    //If they're equal length, Start checking from the most significant bit
+    for(unsigned long long int i = [self length]-1; i != 0 ; i--){
+        if([self getDigitAt:i] == [(LargeInt *)object getDigitAt:i])
+            continue;
+        if([self getDigitAt:i] > [(LargeInt *)object getDigitAt:i])
+            return YES;
+        if([self getDigitAt:i] < [(LargeInt *)object getDigitAt:i])
+            return NO;
+    }
+    
+    //Because the for loop condition is !=0 , we need to check the bit at 0
+    if([self getDigitAt:0] > [(LargeInt *)object getDigitAt:0])
+        return YES;
+    if([self getDigitAt:0] < [(LargeInt *)object getDigitAt:0])
+        return NO;
+    
+    //Than it's equal, so it's not greater
+    return NO;
+}
+-(BOOL) isLessThan:(id)object{
+    if(![object isKindOfClass:[LargeInt class]])
+        [NSException raise:@"Comparing object is not a large int" format:@"it is a : %@", [object className]];
+    [self simplify];
+    [(LargeInt *)object simplify];
+    if([self length] < [(LargeInt *)object length])
+        return YES;
+    if([self length] > [(LargeInt *)object length])
+        return NO;
+    
+    //If they're equal length, Start checking from the most significant bit
+    for(unsigned long long int i = [self length]-1; i != 0 ; i--){
+        if([self getDigitAt:i] == [(LargeInt *)object getDigitAt:i])
+            continue;
+        if([self getDigitAt:i] < [(LargeInt *)object getDigitAt:i])
+            return YES;
+        if([self getDigitAt:i] > [(LargeInt *)object getDigitAt:i])
+            return NO;
+    }
+    
+    //Because the for loop condition is !=0 , we need to check the bit at 0
+    if([self getDigitAt:0] < [(LargeInt *)object getDigitAt:0])
+        return YES;
+    if([self getDigitAt:0] > [(LargeInt *)object getDigitAt:0])
+        return NO;
+    
+    //Than it's equal, so it's not greater
+    return NO;
+}
+-(BOOL) isEqual:(id)object{
+    if(![object isKindOfClass:[LargeInt class]])
+        [NSException raise:@"Comparing object is not a large int" format:@"it is a : %@", [object className]];
+    [self simplify];
+    [(LargeInt *)object simplify];
+    if([self length] != [(LargeInt *)object length])
+        return NO;
+
+    //If they're equal length, Start checking from the most significant bit
+    for(unsigned long long int i = [self length]-1; i != 0 ; i--){
+        if([self getDigitAt:i] != [(LargeInt *)object getDigitAt:i])
+            return NO;
+        else
+            continue;
+    }
+    
+    //Because the for loop condition is !=0 , we need to check the bit at 0
+    if([self getDigitAt:0] != [(LargeInt *)object getDigitAt:0])
+        return NO;
+    
+    //Than it's equal
+    return YES;
+}
+-(BOOL) isEqualTo:(id)object{
+    return [self isEqual:object];
+}
+-(BOOL) isLessThanOrEqualTo:(id)object{
+    return [self isLessThan:object] || [self isEqual:object];
+}
+-(BOOL) isGreaterThanOrEqualTo:(id)object{
+    return [self isGreaterThan:object] || [self isEqual:object];
 }
 @end
