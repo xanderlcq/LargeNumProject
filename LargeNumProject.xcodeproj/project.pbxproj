@@ -14,6 +14,9 @@
 		C03E23491E5340CC005BC4F8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C03E23481E5340CC005BC4F8 /* Assets.xcassets */; };
 		C03E234C1E5340CC005BC4F8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C03E234A1E5340CC005BC4F8 /* Main.storyboard */; };
 		C03E23571E5340CC005BC4F8 /* LargeNumProjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C03E23561E5340CC005BC4F8 /* LargeNumProjectTests.m */; };
+		C03E23631E5345BE005BC4F8 /* LargeInt.m in Sources */ = {isa = PBXBuildFile; fileRef = C03E23621E5345BE005BC4F8 /* LargeInt.m */; };
+		C04856F61E5490650031C448 /* LargeNumGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = C04856F51E5490650031C448 /* LargeNumGenerator.m */; };
+		C0BA4EA11E56DB84008A82D2 /* LargeIntCalculator.m in Sources */ = {isa = PBXBuildFile; fileRef = C0BA4EA01E56DB84008A82D2 /* LargeIntCalculator.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +43,12 @@
 		C03E23521E5340CC005BC4F8 /* LargeNumProjectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LargeNumProjectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C03E23561E5340CC005BC4F8 /* LargeNumProjectTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LargeNumProjectTests.m; sourceTree = "<group>"; };
 		C03E23581E5340CC005BC4F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C03E23611E5345BE005BC4F8 /* LargeInt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LargeInt.h; sourceTree = "<group>"; };
+		C03E23621E5345BE005BC4F8 /* LargeInt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LargeInt.m; sourceTree = "<group>"; };
+		C04856F41E5490650031C448 /* LargeNumGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LargeNumGenerator.h; sourceTree = "<group>"; };
+		C04856F51E5490650031C448 /* LargeNumGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LargeNumGenerator.m; sourceTree = "<group>"; };
+		C0BA4E9F1E56DB84008A82D2 /* LargeIntCalculator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LargeIntCalculator.h; sourceTree = "<group>"; };
+		C0BA4EA01E56DB84008A82D2 /* LargeIntCalculator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LargeIntCalculator.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +94,12 @@
 				C03E233D1E5340CC005BC4F8 /* AppDelegate.m */,
 				C03E23421E5340CC005BC4F8 /* ViewController.h */,
 				C03E23431E5340CC005BC4F8 /* ViewController.m */,
+				C03E23611E5345BE005BC4F8 /* LargeInt.h */,
+				C03E23621E5345BE005BC4F8 /* LargeInt.m */,
+				C04856F41E5490650031C448 /* LargeNumGenerator.h */,
+				C04856F51E5490650031C448 /* LargeNumGenerator.m */,
+				C0BA4E9F1E56DB84008A82D2 /* LargeIntCalculator.h */,
+				C0BA4EA01E56DB84008A82D2 /* LargeIntCalculator.m */,
 				C03E23481E5340CC005BC4F8 /* Assets.xcassets */,
 				C03E234A1E5340CC005BC4F8 /* Main.storyboard */,
 				C03E234D1E5340CC005BC4F8 /* Info.plist */,
@@ -216,8 +231,11 @@
 			files = (
 				C03E23441E5340CC005BC4F8 /* ViewController.m in Sources */,
 				C03E23411E5340CC005BC4F8 /* main.m in Sources */,
+				C0BA4EA11E56DB84008A82D2 /* LargeIntCalculator.m in Sources */,
 				C03E23471E5340CC005BC4F8 /* LargeNumProject.xcdatamodeld in Sources */,
 				C03E233E1E5340CC005BC4F8 /* AppDelegate.m in Sources */,
+				C04856F61E5490650031C448 /* LargeNumGenerator.m in Sources */,
+				C03E23631E5345BE005BC4F8 /* LargeInt.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -411,6 +429,7 @@
 				C03E235D1E5340CC005BC4F8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C03E235E1E5340CC005BC4F8 /* Build configuration list for PBXNativeTarget "LargeNumProjectTests" */ = {
 			isa = XCConfigurationList;
@@ -419,6 +438,7 @@
 				C03E23601E5340CC005BC4F8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
