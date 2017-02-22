@@ -14,6 +14,7 @@
 @property NSMutableArray *data;
 
 -(id) init;
+-(id) initFromInt:(int) num;
 -(int) getDigitAt:(unsigned long long int)index;
 -(int) getMostSigPlace;
 -(int) getLeastSigPlace;

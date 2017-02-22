@@ -19,7 +19,20 @@
     }
     return self;
 }
-
+-(id) initFromInt:(int) num{
+    self = [super init];
+    if(self){
+        self.data = [[NSMutableArray alloc] init];
+        self.base = 10;
+        self.isPositive = num > 0;
+        while(num > 0){
+            int dig = num % self.base;
+            [self insertDigitAtMostSigPlace:dig];
+            num = num/self.base;
+        }
+    }
+    return self;
+}
 -(int) getDigitAt:(unsigned long long int)index{
     if([self length] == 0)
         return 0;
@@ -99,6 +112,8 @@
         [NSException raise:@"Comparing object is not a large int" format:@"it is a : %@", [object className]];
     [self simplify];
     [(LargeInt *)object simplify];
+    if([self length] == 0 && [(LargeInt *)object length] == 0)
+        return NO;
     if([self length] > [(LargeInt *)object length])
         return YES;
     if([self length] < [(LargeInt *)object length])
@@ -128,6 +143,8 @@
         [NSException raise:@"Comparing object is not a large int" format:@"it is a : %@", [object className]];
     [self simplify];
     [(LargeInt *)object simplify];
+    if([self length] == 0 && [(LargeInt *)object length] == 0)
+        return NO;
     if([self length] < [(LargeInt *)object length])
         return YES;
     if([self length] > [(LargeInt *)object length])
@@ -157,6 +174,8 @@
         [NSException raise:@"Comparing object is not a large int" format:@"it is a : %@", [object className]];
     [self simplify];
     [(LargeInt *)object simplify];
+    if([self length] == 0 && [(LargeInt *)object length] == 0)
+        return YES;
     if([self length] != [(LargeInt *)object length])
         return NO;
 

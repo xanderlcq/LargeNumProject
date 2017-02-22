@@ -63,6 +63,45 @@
     NSLog(@"%@",test2);
     NSLog(@"=");
     NSLog(@"%@",result);
+    
+    NSLog(@"=======comparison========");
+    test1 = [[LargeInt alloc] initFromInt:12345];
+    test2 = [[LargeInt alloc] initFromInt:12345];
+    NSLog(@"%@ compare to %@",test1,test2);
+    NSLog(@"%hhd",[test1 isEqual:test2]);
+    NSLog(@"%hhd",[test1 isLessThan:test2]);
+    NSLog(@"%hhd",[test1 isGreaterThan:test2]);
+    NSLog(@"%hhd",[test1 isLessThanOrEqualTo:test2]);
+    NSLog(@"%hhd",[test1 isGreaterThanOrEqualTo:test2]);
+    
+    test1 = [[LargeInt alloc] initFromInt:12345];
+    test2 = [[LargeInt alloc] initFromInt:324];
+    NSLog(@"%@ compare to %@",test1,test2);
+    NSLog(@"%hhd",[test1 isEqual:test2]);
+    NSLog(@"%hhd",[test1 isLessThan:test2]);
+    NSLog(@"%hhd",[test1 isGreaterThan:test2]);
+    NSLog(@"%hhd",[test1 isLessThanOrEqualTo:test2]);
+    NSLog(@"%hhd",[test1 isGreaterThanOrEqualTo:test2]);
+    
+    test1 = [[LargeInt alloc] initFromInt:234];
+    test2 = [[LargeInt alloc] initFromInt:12345];
+    NSLog(@"%@ compare to %@",test1,test2);
+    NSLog(@"%hhd",[test1 isEqual:test2]);
+    NSLog(@"%hhd",[test1 isLessThan:test2]);
+    NSLog(@"%hhd",[test1 isGreaterThan:test2]);
+    NSLog(@"%hhd",[test1 isLessThanOrEqualTo:test2]);
+    NSLog(@"%hhd",[test1 isGreaterThanOrEqualTo:test2]);
+    
+    test1 = [[LargeInt alloc] init];
+    test2 = [[LargeInt alloc] init];
+    NSLog(@"%@ compare to %@",test1,test2);
+    NSLog(@"%hhd",[test1 isEqual:test2]);
+    NSLog(@"%hhd",[test1 isLessThan:test2]);
+    NSLog(@"%hhd",[test1 isGreaterThan:test2]);
+    NSLog(@"%hhd",[test1 isLessThanOrEqualTo:test2]);
+    NSLog(@"%hhd",[test1 isGreaterThanOrEqualTo:test2]);
+    
+    
     // Do any additional setup after loading the view.
 }
 

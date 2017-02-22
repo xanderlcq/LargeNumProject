@@ -157,9 +157,6 @@
     [num2 simplify];
     //We checked if they are both pos or both neg, so set it to one of them
     result.isPositive = num1.isPositive;
-    [num1 simplify];
-    [num2 simplify];
-    [result simplify];
     return result;
     
 }
