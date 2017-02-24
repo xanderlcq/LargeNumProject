@@ -16,7 +16,6 @@
         self.data = [[NSMutableArray alloc] init];
         self.base = 10;
         self.isPositive = YES;
-//        [self insertDigitAt:0 withValue:0];
     }
     return self;
 }

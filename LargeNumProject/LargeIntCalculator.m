@@ -160,9 +160,22 @@
     return result;
     
 }
+
+-(LargeInt *) remainder:(LargeInt *) numerator modBy:(LargeInt *) denominator{
+    LargeInt *quotient = [self divide:numerator by:denominator];
+    LargeInt *newProduct = [self multiply:quotient by:denominator];
+    return [self subtract:numerator by:newProduct];
+}
+
 -(LargeInt *) divide:(LargeInt*) numerator by:(LargeInt *)denominator{
+    [numerator simplify];
+    [denominator simplify];
+    if([denominator isZero]){
+        [NSException raise:@"Cannot divide 0!" format:@"Cannot divide 0!"];
+        return nil;
+    }
     if([denominator isGreaterThan:numerator])
-        return [[LargeInt alloc] initFromInt:0];
+        return [[LargeInt alloc] init];
     if([denominator isEqual:numerator])
         return [[LargeInt alloc] initFromInt:1];
     LargeInt *runTimeNumerator = [[LargeInt alloc] init];
@@ -198,8 +211,8 @@
 
 
 -(int) singleDigQDivide:(LargeInt *) numerator by:(LargeInt *)denominator{
-    if([numerator isZero])
-        [NSException raise:@"Cannot divide 0!" format:@""];
+    if([denominator isZero])
+        [NSException raise:@"Cannot divide 0!" format:@"Cannot divide 0!"];
     for(int i = 0; i <= 9; i++){
         LargeInt *newProduct = [self multiply:[[LargeInt alloc] initFromInt:i+1] by:denominator];
         if([newProduct isGreaterThan:numerator]){

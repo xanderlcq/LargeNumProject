@@ -16,4 +16,5 @@
 -(LargeInt *) singleDigMultiply:(LargeInt *) num mutiplyBy:(int) factor;
 -(LargeInt *) multiply:(LargeInt *) num1 by:(LargeInt *) num2;
 -(LargeInt *) divide:(LargeInt*) numerator by:(LargeInt *)denominator;
+-(LargeInt *) remainder:(LargeInt *) numerator modBy:(LargeInt *) denominator;
 @end
