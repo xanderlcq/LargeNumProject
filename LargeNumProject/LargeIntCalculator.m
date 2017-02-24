@@ -174,8 +174,17 @@
 }
 
 
--(int) singleQDivide:(LargeInt *) numeratpr by:(LargeInt *)denominator{
-    return 0;
+-(int) singleDigQDivide:(LargeInt *) numerator by:(LargeInt *)denominator{
+    if([numerator isZero])
+        [NSException raise:@"Cannot divide 0!" format:@""];
+    for(int i = 0; i <= 9; i++){
+        LargeInt *newProduct = [self multiply:[[LargeInt alloc] initFromInt:i+1] by:denominator];
+        if([newProduct isGreaterThan:numerator]){
+            return i;
+        }
+    }
+    [NSException raise:@"Invalid Single Dig Q division" format:@""];
+    return -1;
 }
 -(void) assertEqualBase:(LargeInt *)num1 hasSameBaseWith:(LargeInt *)num2{
         if(num1.base != num2.base)

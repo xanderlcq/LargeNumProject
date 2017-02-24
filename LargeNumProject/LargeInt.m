@@ -202,4 +202,7 @@
 -(BOOL) isGreaterThanOrEqualTo:(id)object{
     return [self isGreaterThan:object] || [self isEqual:object];
 }
+-(BOOL) isZero{
+    return [self isEqualTo:[[LargeInt alloc] initFromInt:0]];
+}
 @end

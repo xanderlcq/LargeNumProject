@@ -26,6 +26,7 @@
 -(NSString *) description;
 -(LargeInt *) copy;
 -(unsigned long long int) length;
+-(BOOL) isZero;
 
 -(void) simplify;//Get rid of zeros in the front
 -(void) zeroExtend:(unsigned long long int) length;
