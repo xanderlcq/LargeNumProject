@@ -166,7 +166,29 @@
     if([denominator isEqual:numerator])
         return [[LargeInt alloc] initFromInt:1];
     LargeInt *runTimeNumerator = [[LargeInt alloc] init];
+    //12345
+    //234
+    // Get the first sub numerator that is the same length as the denominator
+    runTimeNumerator.data = (NSMutableArray *)[numerator.data subarrayWithRange:NSMakeRange([numerator length]-[denominator length], [denominator length])];
     
+    LargeInt *quotient = [[LargeInt alloc] init];
+    unsigned long long int nextDigIndex = [numerator length]-[denominator length] -1;
+    for(unsigned long long int i = 0; i < [numerator length]-[denominator length];i++){
+        int currentQ = [self singleDigQDivide:runTimeNumerator by:denominator];
+        LargeInt *currentProduct = [self multiply:[[LargeInt alloc] initFromInt:currentQ] by:denominator];
+        LargeInt *currentRemainder = [self subtract:runTimeNumerator by:currentProduct];
+        [currentRemainder shiftLeft:1];
+        runTimeNumerator = [self add:currentRemainder and:[[LargeInt alloc] initFromInt:[numerator getDigitAt:nextDigIndex]]];
+        [quotient insertDigitAtLeastSigPlace:currentQ];
+        nextDigIndex --;
+    }
+    // nextDigIndex == 0
+    int currentQ = [self singleDigQDivide:runTimeNumerator by:denominator];
+    [quotient insertDigitAtLeastSigPlace:currentQ];
+    [quotient simplify];
+    return quotient;
+    
+
     
     
     

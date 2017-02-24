@@ -29,7 +29,7 @@
         self.isPositive = num > 0;
         while(num > 0){
             int dig = num % self.base;
-            NSLog(@"%i",dig);
+            //NSLog(@"Dig: %i",dig);
             [self insertDigitAtMostSigPlace:dig];
             num = num/self.base;
         }

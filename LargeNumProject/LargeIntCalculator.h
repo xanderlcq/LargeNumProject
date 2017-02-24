@@ -15,4 +15,5 @@
 -(void) addOne:(LargeInt *) num1;
 -(LargeInt *) singleDigMultiply:(LargeInt *) num mutiplyBy:(int) factor;
 -(LargeInt *) multiply:(LargeInt *) num1 by:(LargeInt *) num2;
+-(LargeInt *) divide:(LargeInt*) numerator by:(LargeInt *)denominator;
 @end

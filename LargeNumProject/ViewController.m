@@ -109,7 +109,18 @@
     NSLog(@"%hhd",[test1 isLessThanOrEqualTo:test2]);
     NSLog(@"%hhd",[test1 isGreaterThanOrEqualTo:test2]);
     
+    NSLog(@"=======divide========");
+    test1 = [gen generateLargeIntWithLength:6];
+    test2 = [gen generateLargeIntWithLength:3];
+    NSLog(@"numerator: %@",test1);
+    NSLog(@"/");
+    NSLog(@"denominator: %@",test2);
     
+    
+    result = [calc divide:test1 by:test2];
+
+    NSLog(@"=");
+    NSLog(@"%@",result);
     // Do any additional setup after loading the view.
 }
 
