@@ -20,7 +20,15 @@
     LargeInt *og = [test copy];
     LargeIntCalculator *calc = [[LargeIntCalculator alloc] init];
     [calc addOne:test];
+    
+    LargeInt *test3 = [[LargeInt alloc] init];
+    [test3 simplify];
+    
     NSLog(@"%@ + 1 = %@",og,test);
+    
+    
+    
+    
     
     NSLog(@"=======addition========");
     LargeInt *test1 = [gen generateLargeIntWithLength:15];

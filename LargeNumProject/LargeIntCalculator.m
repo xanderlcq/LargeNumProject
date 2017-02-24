@@ -165,6 +165,7 @@
         return [[LargeInt alloc] initFromInt:0];
     if([denominator isEqual:numerator])
         return [[LargeInt alloc] initFromInt:1];
+    LargeInt *runTimeNumerator = [[LargeInt alloc] init];
     
     
     
