@@ -16,16 +16,18 @@
         self.data = [[NSMutableArray alloc] init];
         self.base = 10;
         self.isPositive = YES;
+        [self insertDigitAt:0 withValue:0];
     }
     return self;
 }
+
 -(id) initFromInt:(int) num{
     self = [super init];
     if(self){
         self.data = [[NSMutableArray alloc] init];
         self.base = 10;
         self.isPositive = num > 0;
-        while(num > 0){
+        while(num >= 0){
             int dig = num % self.base;
             [self insertDigitAtMostSigPlace:dig];
             num = num/self.base;
@@ -34,8 +36,8 @@
     return self;
 }
 -(int) getDigitAt:(unsigned long long int)index{
-    if([self length] == 0)
-        return 0;
+    if(index >= [self length])
+        [NSException raise:@"Get dig index out of bound" format:@"Length: %llu, index:%llu",[self length],index];
     return [[self.data objectAtIndex:index] intValue];
 }
 -(int) getMostSigPlace{
@@ -61,7 +63,7 @@
     
 }
 -(void) simplify{
-    while([self getMostSigPlace] == 0 && [self length] != 0)
+    while([self length] != 1 && [self getMostSigPlace] == 0)
         [self.data removeObjectAtIndex:[self.data count]-1];
 }
 -(void) zeroExtend:(unsigned long long int) length{
@@ -100,9 +102,6 @@
     return [self.data count];
 }
 -(NSString*)description{
-    //Reversing because index 0 is the least significant bit (single dit)
-    if([self length] == 0)
-        return @"0";
     NSEnumerator *en = [self.data reverseObjectEnumerator];
     return [[en allObjects] componentsJoinedByString:@""];
 }

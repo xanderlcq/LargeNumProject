@@ -160,6 +160,23 @@
     return result;
     
 }
+-(LargeInt *) divide:(LargeInt*) numerator by:(LargeInt *)denominator{
+    if([denominator isGreaterThan:numerator])
+        return [[LargeInt alloc] initFromInt:0];
+    if([denominator isEqual:numerator])
+        return [[LargeInt alloc] initFromInt:1];
+    
+    
+    
+    
+    
+    return nil;
+}
+
+
+-(int) singleQDivide:(LargeInt *) numeratpr by:(LargeInt *)denominator{
+    return 0;
+}
 -(void) assertEqualBase:(LargeInt *)num1 hasSameBaseWith:(LargeInt *)num2{
         if(num1.base != num2.base)
             [NSException raise:@"bases of two operands of addition are different" format:@"num1's base: %i, num2's base:%i",num1.base,num2.base];
