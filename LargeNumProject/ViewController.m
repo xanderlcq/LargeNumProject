@@ -121,6 +121,13 @@
 
     NSLog(@"=");
     NSLog(@"%@",result);
+    
+    NSLog(@"=======Factorial========");
+    
+    test1 = [[LargeInt alloc] initFromInt:50];
+    NSLog(@"Factorial: %@",test1);
+    result = [calc factorial:test1];
+    NSLog(@"%@",result);
     // Do any additional setup after loading the view.
 }
 

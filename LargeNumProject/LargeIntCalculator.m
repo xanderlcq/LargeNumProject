@@ -170,6 +170,7 @@
 -(LargeInt *) divide:(LargeInt*) numerator by:(LargeInt *)denominator{
     [numerator simplify];
     [denominator simplify];
+    
     if([denominator isZero]){
         [NSException raise:@"Cannot divide 0!" format:@"Cannot divide 0!"];
         return nil;
@@ -178,37 +179,37 @@
         return [[LargeInt alloc] init];
     if([denominator isEqual:numerator])
         return [[LargeInt alloc] initFromInt:1];
+    
+    
     LargeInt *runTimeNumerator = [[LargeInt alloc] init];
-    //12345
-    //234
-    // Get the first sub numerator that is the same length as the denominator
     runTimeNumerator.data = (NSMutableArray *)[numerator.data subarrayWithRange:NSMakeRange([numerator length]-[denominator length], [denominator length])];
     
-    LargeInt *quotient = [[LargeInt alloc] init];
+    LargeInt *resultQuotient = [[LargeInt alloc] init];
     unsigned long long int nextDigIndex = [numerator length]-[denominator length] -1;
-    for(unsigned long long int i = 0; i < [numerator length]-[denominator length];i++){
-        int currentQ = [self singleDigQDivide:runTimeNumerator by:denominator];
-        LargeInt *currentProduct = [self multiply:[[LargeInt alloc] initFromInt:currentQ] by:denominator];
+    
+    for(unsigned long long int i = 0; i < [numerator length]-[denominator length]+1;i++){
+        int currentQuotient = [self singleDigQDivide:runTimeNumerator by:denominator];
+        LargeInt *currentProduct = [self multiply:[[LargeInt alloc] initFromInt:currentQuotient] by:denominator];
         LargeInt *currentRemainder = [self subtract:runTimeNumerator by:currentProduct];
         [currentRemainder shiftLeft:1];
         runTimeNumerator = [self add:currentRemainder and:[[LargeInt alloc] initFromInt:[numerator getDigitAt:nextDigIndex]]];
-        [quotient insertDigitAtLeastSigPlace:currentQ];
+        [resultQuotient insertDigitAtLeastSigPlace:currentQuotient];
         nextDigIndex --;
     }
-    // nextDigIndex == 0
-    int currentQ = [self singleDigQDivide:runTimeNumerator by:denominator];
-    [quotient insertDigitAtLeastSigPlace:currentQ];
-    [quotient simplify];
-    return quotient;
     
-
-    
-    
-    
-    
-    return nil;
+    [resultQuotient simplify];
+    resultQuotient.isPositive = (numerator.isPositive && denominator.isPositive) || (!numerator.isPositive && !denominator.isPositive);
+    return resultQuotient;
 }
 
+-(LargeInt *) factorial:(LargeInt*) num{
+    LargeInt *counter = [[LargeInt alloc] initFromInt:1];
+    LargeInt *result = [[LargeInt alloc] initFromInt:1];
+    for(;[counter isLessThanOrEqualTo:num];[self addOne:counter]){
+        result = [self multiply:result by:counter];
+    }
+    return result;
+}
 
 -(int) singleDigQDivide:(LargeInt *) numerator by:(LargeInt *)denominator{
     if([denominator isZero])

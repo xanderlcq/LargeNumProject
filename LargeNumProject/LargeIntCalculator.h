@@ -17,4 +17,5 @@
 -(LargeInt *) multiply:(LargeInt *) num1 by:(LargeInt *) num2;
 -(LargeInt *) divide:(LargeInt*) numerator by:(LargeInt *)denominator;
 -(LargeInt *) remainder:(LargeInt *) numerator modBy:(LargeInt *) denominator;
+-(LargeInt *) factorial:(LargeInt*) num;
 @end
