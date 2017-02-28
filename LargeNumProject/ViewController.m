@@ -23,7 +23,7 @@
     
     LargeInt *test3 = [[LargeInt alloc] init];
     [test3 simplify];
-    
+
     NSLog(@"%@ + 1 = %@",og,test);
     
     
@@ -81,7 +81,6 @@
     NSLog(@"%hhd",[test1 isGreaterThan:test2]);
     NSLog(@"%hhd",[test1 isLessThanOrEqualTo:test2]);
     NSLog(@"%hhd",[test1 isGreaterThanOrEqualTo:test2]);
-    
     test1 = [[LargeInt alloc] initFromInt:12345];
     test2 = [[LargeInt alloc] initFromInt:324];
     NSLog(@"%@ compare to %@",test1,test2);
@@ -124,7 +123,7 @@
     
     NSLog(@"=======Factorial========");
     
-    test1 = [[LargeInt alloc] initFromInt:50];
+    test1 = [[LargeInt alloc] initFromInt:200];
     NSLog(@"Factorial: %@",test1);
     result = [calc factorial:test1];
     NSLog(@"%@",result);

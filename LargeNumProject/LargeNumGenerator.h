@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "LargeInt.h"
+
 @interface LargeNumGenerator : NSObject
--(LargeInt *) generateLargeIntWithLength:(unsigned long long int) length;
+- (LargeInt *)generateLargeIntWithLength:(unsigned long long int)length;
 @end

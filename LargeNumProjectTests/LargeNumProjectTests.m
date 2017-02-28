@@ -32,9 +32,66 @@
 }
 
 - (void)testLargeIntInit{
-        
+    LargeInt *test1 = [[LargeInt alloc] init];
+    XCTAssertTrue([test1 getDigitAt:0]==0);
+    XCTAssertTrue([test1 getMostSigPlace] == 0);
+    XCTAssertTrue([test1 getLeastSigPlace] == 0);
+    XCTAssertTrue([test1 length] == 0);
+    XCTAssertTrue(test1.isPositive);
+    
+    test1 = [[LargeInt alloc] initFromInt:1234];
+    XCTAssertTrue([[test1 description] isEqualToString: @"1234"]);
+    XCTAssertEqual([test1 getDigitAt:2],2);
+    XCTAssertEqual([test1 getDigitAt:1],3);
+    XCTAssertEqual([test1 getMostSigPlace],1);
+    XCTAssertEqual([test1 getLeastSigPlace],4);
+    XCTAssertTrue(test1.isPositive);
+    
+    test1 = [[LargeInt alloc] initFromInt:-1234];
+    XCTAssertEqual([test1 getDigitAt:2],2);
+    XCTAssertEqual([test1 getDigitAt:1],3);
+    XCTAssertEqual([test1 getMostSigPlace],1);
+    XCTAssertEqual([test1 getLeastSigPlace],4);
+    XCTAssertTrue(!test1.isPositive);
+    
+    //Same as calling init, does not insert the 0 into the array
+    test1 = [[LargeInt alloc] initFromInt:0];
+    XCTAssertEqual([test1 getMostSigPlace],0);
+    XCTAssertEqual([test1 getLeastSigPlace],0);
+    
+    [test1 insertDigitAtMostSigPlace:1];
+    XCTAssertEqual([test1 getMostSigPlace],1);
+    XCTAssertEqual([test1 getLeastSigPlace],1);
+}
+- (void)testInsertandGet{
+    LargeInt *test1 = [[LargeInt alloc] init];
+    [test1 insertDigitAtMostSigPlace:0];
+    [test1 insertDigitAtMostSigPlace:1];
+    [test1 insertDigitAtMostSigPlace:4];
+    [test1 insertDigitAtLeastSigPlace:8];
+    [test1 insertDigitAt:2 withValue:6];
+    XCTAssertTrue([[test1 description] isEqualToString: @"41608"]);
+    XCTAssertEqual([test1 getDigitAt:0],8);
+    XCTAssertEqual([test1 getDigitAt:1],0);
+    XCTAssertEqual([test1 getDigitAt:2],6);
+    XCTAssertEqual([test1 getDigitAt:3],1);
+    XCTAssertEqual([test1 getDigitAt:4],4);
 }
 - (void)testIsGreaterThan{
+    LargeInt *test1 = [[LargeInt alloc] initFromInt:611];
+    LargeInt *test2 = [[LargeInt alloc] initFromInt:500];
+    XCTAssertTrue(![test2 isGreaterThan:test1]);
+    XCTAssertTrue([test1 isGreaterThan:test2]);
+    
+    test1 = [[LargeInt alloc] initFromInt:999];
+    test2 = [[LargeInt alloc] init];
+    XCTAssertTrue(![test2 isGreaterThan:test1]);
+    XCTAssertTrue([test1 isGreaterThan:test2]);
+    
+    test1 = [[LargeInt alloc] initFromInt:999];
+    test2 = [[LargeInt alloc] initFromInt:-50];
+    XCTAssertTrue(![test2 isGreaterThan:test1]);
+    XCTAssertTrue([test1 isGreaterThan:test2]);
     
 }
 - (void)testIsLessThan{
@@ -59,15 +116,11 @@
     
 }
 - (void)testPerformanceExample {
-    LargeIntCalculator *calc = [[LargeIntCalculator alloc] init];
-    LargeNumGenerator *gen = [[LargeNumGenerator alloc] init];
-    LargeInt *test1 = [gen generateLargeIntWithLength:1000];
-    LargeInt *test2 = [gen generateLargeIntWithLength:2000];
+
     
     // This is an example of a performance test case.
     [self measureBlock:^{
-        LargeInt *result = [calc multiply:test1 by:test2];
-        // Put the code you want to measure the time of here.
+
     }];
 }
 

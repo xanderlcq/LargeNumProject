@@ -8,14 +8,23 @@
 
 #import <Foundation/Foundation.h>
 #import "LargeInt.h"
+
 @interface LargeIntCalculator : NSObject
 
 
--(LargeInt *) add:(LargeInt *) num1 and:(LargeInt *)num2;
--(void) addOne:(LargeInt *) num1;
--(LargeInt *) singleDigMultiply:(LargeInt *) num mutiplyBy:(int) factor;
--(LargeInt *) multiply:(LargeInt *) num1 by:(LargeInt *) num2;
--(LargeInt *) divide:(LargeInt*) numerator by:(LargeInt *)denominator;
--(LargeInt *) remainder:(LargeInt *) numerator modBy:(LargeInt *) denominator;
--(LargeInt *) factorial:(LargeInt*) num;
+- (LargeInt *)add:(LargeInt *)num1 and:(LargeInt *)num2;
+
+- (LargeInt *)subtract:(LargeInt *)num1 by:(LargeInt *)num2;
+
+- (void)addOne:(LargeInt *)num1;
+
+- (LargeInt *)singleDigMultiply:(LargeInt *)num mutiplyBy:(int)factor;
+
+- (LargeInt *)multiply:(LargeInt *)num1 by:(LargeInt *)num2;
+
+- (LargeInt *)divide:(LargeInt *)numerator by:(LargeInt *)denominator;
+
+- (LargeInt *)remainder:(LargeInt *)numerator modBy:(LargeInt *)denominator;
+
+- (LargeInt *)factorial:(LargeInt *)num;
 @end

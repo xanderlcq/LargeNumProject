@@ -43,7 +43,7 @@
     if (_managedObjectModel) {
         return _managedObjectModel;
     }
-    
+
     NSURL *modelURL = [[NSBundle mainBundle] URLForResource:@"LargeNumProject" withExtension:@"momd"];
     _managedObjectModel = [[NSManagedObjectModel alloc] initWithContentsOfURL:modelURL];
     return _managedObjectModel;
@@ -54,13 +54,13 @@
     if (_persistentStoreCoordinator) {
         return _persistentStoreCoordinator;
     }
-    
+
     NSFileManager *fileManager = [NSFileManager defaultManager];
     NSURL *applicationDocumentsDirectory = [self applicationDocumentsDirectory];
     BOOL shouldFail = NO;
     NSError *error = nil;
     NSString *failureReason = @"There was an error creating or loading the application's saved data.";
-    
+
     // Make sure the application files directory is there
     NSDictionary *properties = [applicationDocumentsDirectory resourceValuesForKeys:@[NSURLIsDirectoryKey] error:&error];
     if (properties) {
@@ -72,13 +72,13 @@
         error = nil;
         [fileManager createDirectoryAtPath:[applicationDocumentsDirectory path] withIntermediateDirectories:YES attributes:nil error:&error];
     }
-    
+
     if (!shouldFail && !error) {
         NSPersistentStoreCoordinator *coordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:[self managedObjectModel]];
         NSURL *url = [applicationDocumentsDirectory URLByAppendingPathComponent:@"LargeNumProject.storedata"];
         if (![coordinator addPersistentStoreWithType:NSXMLStoreType configuration:nil URL:url options:nil error:&error]) {
             // Replace this implementation with code to handle the error appropriately.
-             
+
             /*
              Typical reasons for an error here include:
              * The persistent store is not accessible, due to permissions or data protection when the device is locked.
@@ -90,7 +90,7 @@
         }
         _persistentStoreCoordinator = coordinator;
     }
-    
+
     if (shouldFail || error) {
         // Report any error we got.
         NSMutableDictionary *dict = [NSMutableDictionary dictionary];
@@ -112,7 +112,7 @@
     if (_managedObjectContext) {
         return _managedObjectContext;
     }
-    
+
     NSPersistentStoreCoordinator *coordinator = [self persistentStoreCoordinator];
     if (!coordinator) {
         return nil;
@@ -132,7 +132,7 @@
     if (![context commitEditing]) {
         NSLog(@"%@:%@ unable to commit editing before saving", [self class], NSStringFromSelector(_cmd));
     }
-    
+
     NSError *error = nil;
     if (context.hasChanges && ![context save:&error]) {
         [[NSApplication sharedApplication] presentError:error];
@@ -151,16 +151,16 @@
     if (!context) {
         return NSTerminateNow;
     }
-    
+
     if (![context commitEditing]) {
         NSLog(@"%@:%@ unable to commit editing to terminate", [self class], NSStringFromSelector(_cmd));
         return NSTerminateCancel;
     }
-    
+
     if (!context.hasChanges) {
         return NSTerminateNow;
     }
-    
+
     NSError *error = nil;
     if (![context save:&error]) {
 
@@ -181,7 +181,7 @@
         [alert addButtonWithTitle:cancelButton];
 
         NSInteger answer = [alert runModal];
-        
+
         if (answer == NSAlertSecondButtonReturn) {
             return NSTerminateCancel;
         }
