@@ -26,11 +26,6 @@
     [super tearDown];
 }
 
-- (void)testExample {
-    // This is an example of a functional test case.
-    // Use XCTAssert and related functions to verify your tests produce the correct results.
-}
-
 - (void)testLargeIntInit{
     LargeInt *test1 = [[LargeInt alloc] init];
     XCTAssertTrue([test1 getDigitAt:0]==0);
@@ -63,6 +58,7 @@
     XCTAssertEqual([test1 getMostSigPlace],1);
     XCTAssertEqual([test1 getLeastSigPlace],1);
 }
+
 - (void)testInsertandGet{
     LargeInt *test1 = [[LargeInt alloc] init];
     [test1 insertDigitAtMostSigPlace:0];
@@ -77,6 +73,7 @@
     XCTAssertEqual([test1 getDigitAt:3],1);
     XCTAssertEqual([test1 getDigitAt:4],4);
 }
+
 - (void)testIsGreaterThan{
     LargeInt *test1 = [[LargeInt alloc] initFromInt:611];
     LargeInt *test2 = [[LargeInt alloc] initFromInt:500];
@@ -88,14 +85,76 @@
     XCTAssertTrue(![test2 isGreaterThan:test1]);
     XCTAssertTrue([test1 isGreaterThan:test2]);
     
-    test1 = [[LargeInt alloc] initFromInt:999];
+    test1 = [[LargeInt alloc] initFromInt:9];
     test2 = [[LargeInt alloc] initFromInt:-50];
     XCTAssertTrue(![test2 isGreaterThan:test1]);
     XCTAssertTrue([test1 isGreaterThan:test2]);
     
+    test1 = [[LargeInt alloc] initFromInt:4];
+    test2 = [[LargeInt alloc] initFromInt:-50];
+    XCTAssertTrue(![test2 isGreaterThan:test1]);
+    XCTAssertTrue([test1 isGreaterThan:test2]);
+    
+    test1 = [[LargeInt alloc] initFromInt:-10];
+    test2 = [[LargeInt alloc] initFromInt:-50];
+    XCTAssertTrue(![test2 isGreaterThan:test1]);
+    XCTAssertTrue([test1 isGreaterThan:test2]);
+    
+    test1 = [[LargeInt alloc] initFromInt:0];
+    test2 = [[LargeInt alloc] initFromInt:0];
+    XCTAssertTrue(![test2 isGreaterThan:test1]);
+    XCTAssertTrue(![test1 isGreaterThan:test2]);
+    
+    test1 = [[LargeInt alloc] initFromInt:0];
+    test2 = [[LargeInt alloc] initFromInt:-50];
+    XCTAssertTrue(![test2 isGreaterThan:test1]);
+    XCTAssertTrue([test1 isGreaterThan:test2]);
+    
+    test1 = [[LargeInt alloc] initFromInt:-50];
+    test2 = [[LargeInt alloc] initFromInt:-50];
+    XCTAssertTrue(![test2 isGreaterThan:test1]);
+    XCTAssertTrue(![test1 isGreaterThan:test2]);
 }
 - (void)testIsLessThan{
+    LargeInt *test1 = [[LargeInt alloc] initFromInt:611];
+    LargeInt *test2 = [[LargeInt alloc] initFromInt:500];
+    XCTAssertTrue([test2 isLessThan:test1]);
+    XCTAssertTrue(![test1 isLessThan:test2]);
     
+    test1 = [[LargeInt alloc] initFromInt:999];
+    test2 = [[LargeInt alloc] init];
+    XCTAssertTrue([test2 isLessThan:test1]);
+    XCTAssertTrue(![test1 isLessThan:test2]);
+    
+    test1 = [[LargeInt alloc] initFromInt:9];
+    test2 = [[LargeInt alloc] initFromInt:-50];
+    XCTAssertTrue([test2 isLessThan:test1]);
+    XCTAssertTrue(![test1 isLessThan:test2]);
+    
+    test1 = [[LargeInt alloc] initFromInt:4];
+    test2 = [[LargeInt alloc] initFromInt:-50];
+    XCTAssertTrue([test2 isLessThan:test1]);
+    XCTAssertTrue(![test1 isLessThan:test2]);
+    
+    test1 = [[LargeInt alloc] initFromInt:-10];
+    test2 = [[LargeInt alloc] initFromInt:-50];
+    XCTAssertTrue([test2 isLessThan:test1]);
+    XCTAssertTrue(![test1 isLessThan:test2]);
+    
+    test1 = [[LargeInt alloc] initFromInt:0];
+    test2 = [[LargeInt alloc] initFromInt:0];
+    XCTAssertTrue(![test2 isLessThan:test1]);
+    XCTAssertTrue(![test1 isLessThan:test2]);
+    
+    test1 = [[LargeInt alloc] initFromInt:0];
+    test2 = [[LargeInt alloc] initFromInt:-50];
+    XCTAssertTrue([test2 isLessThan:test1]);
+    XCTAssertTrue(![test1 isLessThan:test2]);
+    
+    test1 = [[LargeInt alloc] initFromInt:-50];
+    test2 = [[LargeInt alloc] initFromInt:-50];
+    XCTAssertTrue(![test2 isLessThan:test1]);
+    XCTAssertTrue(![test1 isLessThan:test2]);
 }
 - (void)testIsEqual{
     

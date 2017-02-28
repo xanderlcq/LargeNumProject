@@ -121,76 +121,94 @@
 }
 
 - (BOOL)isGreaterThan:(id)object {
-    if (![object isKindOfClass:[LargeInt class]])
-        [NSException raise:@"Comparing object is not a large int" format:@"it is a : %@", [object className]];
+    [self checkClass:object];
     [self simplify];
     [(LargeInt *) object simplify];
-    if ([self length] == 0 && [(LargeInt *) object length] == 0)
+    //Both zero
+    if([self isZero] && [(LargeInt *) object isZero])
         return NO;
-    if ([self length] > [(LargeInt *) object length])
-        return YES;
-    if ([self length] < [(LargeInt *) object length])
-        return NO;
+    //Self is pos, object is neg
+    if(self.isPositive && !((LargeInt *) object).isPositive)
+        return  YES;
+    //The other way
+    if(!self.isPositive && ((LargeInt *) object).isPositive)
+        return  NO;
+    
+    //Now they are either both pos or both neg!
+    //Check length
+    if ([self length] > [(LargeInt *) object length]) //Self is longer
+        return self.isPositive && ((LargeInt *) object).isPositive; //Return true if both pos
+    if ([self length] < [(LargeInt *) object length]) //Self is shorter
+        return !self.isPositive && !((LargeInt *) object).isPositive; //Return true if both neg
 
     //If they're equal length, Start checking from the most significant bit
     for (unsigned long long int i = [self length] - 1; i != 0; i--) {
         if ([self getDigitAt:i] == [(LargeInt *) object getDigitAt:i])
             continue;
-        if ([self getDigitAt:i] > [(LargeInt *) object getDigitAt:i])
-            return YES;
-        if ([self getDigitAt:i] < [(LargeInt *) object getDigitAt:i])
-            return NO;
+        if ([self getDigitAt:i] > [(LargeInt *) object getDigitAt:i]) //Self abs is bigger
+            return self.isPositive && ((LargeInt *) object).isPositive; //Return true if both pos
+        if ([self getDigitAt:i] < [(LargeInt *) object getDigitAt:i]) //Self abs is smaller
+            return !self.isPositive && !((LargeInt *) object).isPositive; //Return true if both neg
     }
 
     //Because the for loop condition is !=0 , we need to check the bit at 0
     if ([self getDigitAt:0] > [(LargeInt *) object getDigitAt:0])
-        return YES;
+        return self.isPositive && ((LargeInt *) object).isPositive;
     if ([self getDigitAt:0] < [(LargeInt *) object getDigitAt:0])
-        return NO;
+        return !self.isPositive && !((LargeInt *) object).isPositive;
 
     //Than it's equal, so it's not greater
     return NO;
 }
 
 - (BOOL)isLessThan:(id)object {
-    if (![object isKindOfClass:[LargeInt class]])
-        [NSException raise:@"Comparing object is not a large int" format:@"it is a : %@", [object className]];
+    [self checkClass:object];
     [self simplify];
     [(LargeInt *) object simplify];
-    if ([self length] == 0 && [(LargeInt *) object length] == 0)
+    
+    if([self isZero] && [(LargeInt *) object isZero])
         return NO;
-    if ([self length] < [(LargeInt *) object length])
-        return YES;
-    if ([self length] > [(LargeInt *) object length])
-        return NO;
+    //Self is pos, object is neg
+    if(self.isPositive && !((LargeInt *) object).isPositive)
+        return  NO;
+    //The other way
+    if(!self.isPositive && ((LargeInt *) object).isPositive)
+        return  YES;
+    
+    if ([self length] < [(LargeInt *) object length]) //Self is shorter
+        return self.isPositive && ((LargeInt *) object).isPositive; //Return true if both pos
+    if ([self length] > [(LargeInt *) object length]) //Self is longer
+        return !self.isPositive && !((LargeInt *) object).isPositive; //Return true if both neg
 
     //If they're equal length, Start checking from the most significant bit
     for (unsigned long long int i = [self length] - 1; i != 0; i--) {
         if ([self getDigitAt:i] == [(LargeInt *) object getDigitAt:i])
             continue;
-        if ([self getDigitAt:i] < [(LargeInt *) object getDigitAt:i])
-            return YES;
-        if ([self getDigitAt:i] > [(LargeInt *) object getDigitAt:i])
-            return NO;
+        if ([self getDigitAt:i] < [(LargeInt *) object getDigitAt:i])  //Self abs is smaller
+            return self.isPositive && ((LargeInt *) object).isPositive; //Return true if both pos
+        if ([self getDigitAt:i] > [(LargeInt *) object getDigitAt:i]) //Self abs is bigger
+            return !self.isPositive && !((LargeInt *) object).isPositive; //Return true if both neg
     }
 
     //Because the for loop condition is !=0 , we need to check the bit at 0
     if ([self getDigitAt:0] < [(LargeInt *) object getDigitAt:0])
-        return YES;
+        return self.isPositive && ((LargeInt *) object).isPositive;
     if ([self getDigitAt:0] > [(LargeInt *) object getDigitAt:0])
-        return NO;
+        return !self.isPositive && !((LargeInt *) object).isPositive;
 
     //Than it's equal, so it's not greater
     return NO;
 }
 
 - (BOOL)isEqual:(id)object {
-    if (![object isKindOfClass:[LargeInt class]])
-        [NSException raise:@"Comparing object is not a large int" format:@"it is a : %@", [object className]];
+    [self checkClass:object];
     [self simplify];
     [(LargeInt *) object simplify];
-    if ([self length] == 0 && [(LargeInt *) object length] == 0)
+    
+    if ([self isZero] && [(LargeInt *) object isZero])
         return YES;
+    if (self.isPositive != ((LargeInt *) object).isPositive)
+        return NO;
     if ([self length] != [(LargeInt *) object length])
         return NO;
 
@@ -206,10 +224,13 @@
     if ([self getDigitAt:0] != [(LargeInt *) object getDigitAt:0])
         return NO;
 
-    //Than it's equal
-    return YES;
+    //Than the abs is equal, return signs check
+    return (self.isPositive && ((LargeInt *) object).isPositive) || (!self.isPositive && !((LargeInt *) object).isPositive);
 }
-
+-(void) checkClass:(id)object{
+    if (![object isKindOfClass:[LargeInt class]])
+        [NSException raise:@"Comparing object is not a large int" format:@"Invalid object, it is a : %@", [object className]];
+}
 - (BOOL)isEqualTo:(id)object {
     return [self isEqual:object];
 }
@@ -223,6 +244,7 @@
 }
 
 - (BOOL)isZero {
-    return [self isEqualTo:[[LargeInt alloc] initFromInt:0]];
+    [self simplify];
+    return [self length] == 0 || ([self length] == 1 && [self getMostSigPlace] == 0);
 }
 @end

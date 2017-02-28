@@ -14,119 +14,119 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    LargeNumGenerator *gen = [[LargeNumGenerator alloc] init];
-    LargeInt *test = [gen generateLargeIntWithLength:5];
-    [test setDigitAt:0 withValue:9];
-    LargeInt *og = [test copy];
-    LargeIntCalculator *calc = [[LargeIntCalculator alloc] init];
-    [calc addOne:test];
-    
-    LargeInt *test3 = [[LargeInt alloc] init];
-    [test3 simplify];
-
-    NSLog(@"%@ + 1 = %@",og,test);
-    
-    
-    
-    
-    
-    NSLog(@"=======addition========");
-    LargeInt *test1 = [gen generateLargeIntWithLength:15];
-    LargeInt *test2 = [gen generateLargeIntWithLength:10];
-   
-    LargeInt *addResult = [calc add:test1 and:test2];
-    NSLog(@"%@",test1);
-    NSLog(@"+");
-    NSLog(@"%@",test2);
-    NSLog(@"=");
-    NSLog(@"%@",addResult);
-    
-    NSLog(@"=======Single dig multiply========");
-    test1 = [gen generateLargeIntWithLength:5];
-    int factor = 7;
-    LargeInt *result = [calc singleDigMultiply:test1 mutiplyBy:factor];
-    NSLog(@"%@",test1);
-    NSLog(@"*");
-    NSLog(@"%i",factor);
-    NSLog(@"=");
-    NSLog(@"%@",result);
-    
-    NSLog(@"=======shifting========");
-    test1 = [gen generateLargeIntWithLength:5];
-    int shifting = 5;
-    NSLog(@"%@",test1);
-    [test1 shiftLeft:shifting];
-    NSLog(@"*");
-    NSLog(@"shift left: %i spaces",shifting);
-    NSLog(@"=");
-    NSLog(@"%@",test1);
-
-    NSLog(@"=======multiply========");
-    test1 = [gen generateLargeIntWithLength:54];
-    test2 = [gen generateLargeIntWithLength:24];
-    
-    result = [calc multiply:test1 by:test2];
-    NSLog(@"%@",test1);
-    NSLog(@"*");
-    NSLog(@"%@",test2);
-    NSLog(@"=");
-    NSLog(@"%@",result);
-    
-    NSLog(@"=======comparison========");
-    test1 = [[LargeInt alloc] initFromInt:12345];
-    test2 = [[LargeInt alloc] initFromInt:12345];
-    NSLog(@"%@ compare to %@",test1,test2);
-    NSLog(@"%hhd",[test1 isEqual:test2]);
-    NSLog(@"%hhd",[test1 isLessThan:test2]);
-    NSLog(@"%hhd",[test1 isGreaterThan:test2]);
-    NSLog(@"%hhd",[test1 isLessThanOrEqualTo:test2]);
-    NSLog(@"%hhd",[test1 isGreaterThanOrEqualTo:test2]);
-    test1 = [[LargeInt alloc] initFromInt:12345];
-    test2 = [[LargeInt alloc] initFromInt:324];
-    NSLog(@"%@ compare to %@",test1,test2);
-    NSLog(@"%hhd",[test1 isEqual:test2]);
-    NSLog(@"%hhd",[test1 isLessThan:test2]);
-    NSLog(@"%hhd",[test1 isGreaterThan:test2]);
-    NSLog(@"%hhd",[test1 isLessThanOrEqualTo:test2]);
-    NSLog(@"%hhd",[test1 isGreaterThanOrEqualTo:test2]);
-    
-    test1 = [[LargeInt alloc] initFromInt:234];
-    test2 = [[LargeInt alloc] initFromInt:12345];
-    NSLog(@"%@ compare to %@",test1,test2);
-    NSLog(@"%hhd",[test1 isEqual:test2]);
-    NSLog(@"%hhd",[test1 isLessThan:test2]);
-    NSLog(@"%hhd",[test1 isGreaterThan:test2]);
-    NSLog(@"%hhd",[test1 isLessThanOrEqualTo:test2]);
-    NSLog(@"%hhd",[test1 isGreaterThanOrEqualTo:test2]);
-    
-    test1 = [[LargeInt alloc] init];
-    test2 = [[LargeInt alloc] init];
-    NSLog(@"%@ compare to %@",test1,test2);
-    NSLog(@"%hhd",[test1 isEqual:test2]);
-    NSLog(@"%hhd",[test1 isLessThan:test2]);
-    NSLog(@"%hhd",[test1 isGreaterThan:test2]);
-    NSLog(@"%hhd",[test1 isLessThanOrEqualTo:test2]);
-    NSLog(@"%hhd",[test1 isGreaterThanOrEqualTo:test2]);
-    
-    NSLog(@"=======divide========");
-    test1 = [gen generateLargeIntWithLength:6];
-    test2 = [gen generateLargeIntWithLength:3];
-    NSLog(@"numerator: %@",test1);
-    NSLog(@"/");
-    NSLog(@"denominator: %@",test2);
-    
-    
-    result = [calc divide:test1 by:test2];
-
-    NSLog(@"=");
-    NSLog(@"%@",result);
-    
-    NSLog(@"=======Factorial========");
-    
-    test1 = [[LargeInt alloc] initFromInt:200];
-    NSLog(@"Factorial: %@",test1);
-    result = [calc factorial:test1];
-    NSLog(@"%@",result);
+//    LargeNumGenerator *gen = [[LargeNumGenerator alloc] init];
+//    LargeInt *test = [gen generateLargeIntWithLength:5];
+//    [test setDigitAt:0 withValue:9];
+//    LargeInt *og = [test copy];
+//    LargeIntCalculator *calc = [[LargeIntCalculator alloc] init];
+//    [calc addOne:test];
+//    
+//    LargeInt *test3 = [[LargeInt alloc] init];
+//    [test3 simplify];
+//
+//    NSLog(@"%@ + 1 = %@",og,test);
+//    
+//    
+//    
+//    
+//    
+//    NSLog(@"=======addition========");
+//    LargeInt *test1 = [gen generateLargeIntWithLength:15];
+//    LargeInt *test2 = [gen generateLargeIntWithLength:10];
+//   
+//    LargeInt *addResult = [calc add:test1 and:test2];
+//    NSLog(@"%@",test1);
+//    NSLog(@"+");
+//    NSLog(@"%@",test2);
+//    NSLog(@"=");
+//    NSLog(@"%@",addResult);
+//    
+//    NSLog(@"=======Single dig multiply========");
+//    test1 = [gen generateLargeIntWithLength:5];
+//    int factor = 7;
+//    LargeInt *result = [calc singleDigMultiply:test1 mutiplyBy:factor];
+//    NSLog(@"%@",test1);
+//    NSLog(@"*");
+//    NSLog(@"%i",factor);
+//    NSLog(@"=");
+//    NSLog(@"%@",result);
+//    
+//    NSLog(@"=======shifting========");
+//    test1 = [gen generateLargeIntWithLength:5];
+//    int shifting = 5;
+//    NSLog(@"%@",test1);
+//    [test1 shiftLeft:shifting];
+//    NSLog(@"*");
+//    NSLog(@"shift left: %i spaces",shifting);
+//    NSLog(@"=");
+//    NSLog(@"%@",test1);
+//
+//    NSLog(@"=======multiply========");
+//    test1 = [gen generateLargeIntWithLength:54];
+//    test2 = [gen generateLargeIntWithLength:24];
+//    
+//    result = [calc multiply:test1 by:test2];
+//    NSLog(@"%@",test1);
+//    NSLog(@"*");
+//    NSLog(@"%@",test2);
+//    NSLog(@"=");
+//    NSLog(@"%@",result);
+//    
+//    NSLog(@"=======comparison========");
+//    test1 = [[LargeInt alloc] initFromInt:12345];
+//    test2 = [[LargeInt alloc] initFromInt:12345];
+//    NSLog(@"%@ compare to %@",test1,test2);
+//    NSLog(@"%hhd",[test1 isEqual:test2]);
+//    NSLog(@"%hhd",[test1 isLessThan:test2]);
+//    NSLog(@"%hhd",[test1 isGreaterThan:test2]);
+//    NSLog(@"%hhd",[test1 isLessThanOrEqualTo:test2]);
+//    NSLog(@"%hhd",[test1 isGreaterThanOrEqualTo:test2]);
+//    test1 = [[LargeInt alloc] initFromInt:12345];
+//    test2 = [[LargeInt alloc] initFromInt:324];
+//    NSLog(@"%@ compare to %@",test1,test2);
+//    NSLog(@"%hhd",[test1 isEqual:test2]);
+//    NSLog(@"%hhd",[test1 isLessThan:test2]);
+//    NSLog(@"%hhd",[test1 isGreaterThan:test2]);
+//    NSLog(@"%hhd",[test1 isLessThanOrEqualTo:test2]);
+//    NSLog(@"%hhd",[test1 isGreaterThanOrEqualTo:test2]);
+//    
+//    test1 = [[LargeInt alloc] initFromInt:234];
+//    test2 = [[LargeInt alloc] initFromInt:12345];
+//    NSLog(@"%@ compare to %@",test1,test2);
+//    NSLog(@"%hhd",[test1 isEqual:test2]);
+//    NSLog(@"%hhd",[test1 isLessThan:test2]);
+//    NSLog(@"%hhd",[test1 isGreaterThan:test2]);
+//    NSLog(@"%hhd",[test1 isLessThanOrEqualTo:test2]);
+//    NSLog(@"%hhd",[test1 isGreaterThanOrEqualTo:test2]);
+//    
+//    test1 = [[LargeInt alloc] init];
+//    test2 = [[LargeInt alloc] init];
+//    NSLog(@"%@ compare to %@",test1,test2);
+//    NSLog(@"%hhd",[test1 isEqual:test2]);
+//    NSLog(@"%hhd",[test1 isLessThan:test2]);
+//    NSLog(@"%hhd",[test1 isGreaterThan:test2]);
+//    NSLog(@"%hhd",[test1 isLessThanOrEqualTo:test2]);
+//    NSLog(@"%hhd",[test1 isGreaterThanOrEqualTo:test2]);
+//    
+//    NSLog(@"=======divide========");
+//    test1 = [gen generateLargeIntWithLength:6];
+//    test2 = [gen generateLargeIntWithLength:3];
+//    NSLog(@"numerator: %@",test1);
+//    NSLog(@"/");
+//    NSLog(@"denominator: %@",test2);
+//    
+//    
+//    result = [calc divide:test1 by:test2];
+//
+//    NSLog(@"=");
+//    NSLog(@"%@",result);
+//    
+//    NSLog(@"=======Factorial========");
+//    
+//    test1 = [[LargeInt alloc] initFromInt:2];
+//    NSLog(@"Factorial: %@",test1);
+//    result = [calc factorial:test1];
+//    NSLog(@"%@",result);
     // Do any additional setup after loading the view.
 }
 
