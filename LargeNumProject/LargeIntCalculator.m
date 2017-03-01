@@ -131,12 +131,12 @@
         num2_copy.isPositive = YES;
         return [self subtract:num1 by:num2_copy];
     }
-
+    
     // Negative add postive -5 + 4 = 4-5
     if (!num1.isPositive && num2.isPositive) {
         LargeInt *num1_copy = [num1 copy];
         num1_copy.isPositive = YES;
-        return [self add:num2 and:num1_copy];
+        return [self subtract:num2 by:num1_copy];
     }
 
     [self enforceEqualLength:num1 and:num2];
@@ -172,15 +172,27 @@
 - (LargeInt *)divide:(LargeInt *)numerator by:(LargeInt *)denominator {
     [numerator simplify];
     [denominator simplify];
-
+    BOOL ogNumIsPos =numerator.isPositive;
+    BOOL ogDenIsPos = denominator.isPositive;
+    BOOL sign = (numerator.isPositive && denominator.isPositive) || (!numerator.isPositive && !denominator.isPositive);
+    numerator.isPositive = YES;
+    denominator.isPositive = YES;
+    
     if ([denominator isZero]) {
         [NSException raise:@"Cannot divide 0!" format:@"Cannot divide 0!"];
         return nil;
     }
     if ([denominator isGreaterThan:numerator])
         return [[LargeInt alloc] init];
-    if ([denominator isEqual:numerator])
-        return [[LargeInt alloc] initFromInt:1];
+    if ([denominator isEqual:numerator]){
+        LargeInt *result =  [[LargeInt alloc] initFromInt:1];
+        result.isPositive =sign;
+        numerator.isPositive = ogNumIsPos;
+        denominator.isPositive = ogDenIsPos;
+        return result;
+    }
+    
+    
 
 
     LargeInt *runTimeNumerator = [[LargeInt alloc] init];
@@ -200,7 +212,9 @@
     }
 
     [resultQuotient simplify];
-    resultQuotient.isPositive = (numerator.isPositive && denominator.isPositive) || (!numerator.isPositive && !denominator.isPositive);
+    resultQuotient.isPositive =sign;
+    numerator.isPositive = ogNumIsPos;
+    denominator.isPositive = ogDenIsPos;
     return resultQuotient;
 }
 

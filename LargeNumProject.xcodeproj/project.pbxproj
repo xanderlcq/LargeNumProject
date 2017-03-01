@@ -13,10 +13,11 @@
 		C03E23471E5340CC005BC4F8 /* LargeNumProject.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C03E23451E5340CC005BC4F8 /* LargeNumProject.xcdatamodeld */; };
 		C03E23491E5340CC005BC4F8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C03E23481E5340CC005BC4F8 /* Assets.xcassets */; };
 		C03E234C1E5340CC005BC4F8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C03E234A1E5340CC005BC4F8 /* Main.storyboard */; };
-		C03E23571E5340CC005BC4F8 /* LargeNumProjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C03E23561E5340CC005BC4F8 /* LargeNumProjectTests.m */; };
 		C03E23631E5345BE005BC4F8 /* LargeInt.m in Sources */ = {isa = PBXBuildFile; fileRef = C03E23621E5345BE005BC4F8 /* LargeInt.m */; };
 		C04856F61E5490650031C448 /* LargeNumGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = C04856F51E5490650031C448 /* LargeNumGenerator.m */; };
+		C074EC3B1E65BB42008B8BFD /* LarteIntCalculatorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C074EC3A1E65BB42008B8BFD /* LarteIntCalculatorTests.m */; };
 		C0BA4EA11E56DB84008A82D2 /* LargeIntCalculator.m in Sources */ = {isa = PBXBuildFile; fileRef = C0BA4EA01E56DB84008A82D2 /* LargeIntCalculator.m */; };
+		C0E4317F1E67087400035118 /* LargeIntTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C0E4317E1E67087400035118 /* LargeIntTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,14 +42,15 @@
 		C03E234B1E5340CC005BC4F8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C03E234D1E5340CC005BC4F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C03E23521E5340CC005BC4F8 /* LargeNumProjectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LargeNumProjectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		C03E23561E5340CC005BC4F8 /* LargeNumProjectTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LargeNumProjectTests.m; sourceTree = "<group>"; };
 		C03E23581E5340CC005BC4F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C03E23611E5345BE005BC4F8 /* LargeInt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LargeInt.h; sourceTree = "<group>"; };
 		C03E23621E5345BE005BC4F8 /* LargeInt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LargeInt.m; sourceTree = "<group>"; };
 		C04856F41E5490650031C448 /* LargeNumGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LargeNumGenerator.h; sourceTree = "<group>"; };
 		C04856F51E5490650031C448 /* LargeNumGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LargeNumGenerator.m; sourceTree = "<group>"; };
+		C074EC3A1E65BB42008B8BFD /* LarteIntCalculatorTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LarteIntCalculatorTests.m; sourceTree = "<group>"; };
 		C0BA4E9F1E56DB84008A82D2 /* LargeIntCalculator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LargeIntCalculator.h; sourceTree = "<group>"; };
 		C0BA4EA01E56DB84008A82D2 /* LargeIntCalculator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LargeIntCalculator.m; sourceTree = "<group>"; };
+		C0E4317E1E67087400035118 /* LargeIntTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LargeIntTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,7 +122,8 @@
 		C03E23551E5340CC005BC4F8 /* LargeNumProjectTests */ = {
 			isa = PBXGroup;
 			children = (
-				C03E23561E5340CC005BC4F8 /* LargeNumProjectTests.m */,
+				C0E4317E1E67087400035118 /* LargeIntTests.m */,
+				C074EC3A1E65BB42008B8BFD /* LarteIntCalculatorTests.m */,
 				C03E23581E5340CC005BC4F8 /* Info.plist */,
 			);
 			path = LargeNumProjectTests;
@@ -243,7 +246,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C03E23571E5340CC005BC4F8 /* LargeNumProjectTests.m in Sources */,
+				C074EC3B1E65BB42008B8BFD /* LarteIntCalculatorTests.m in Sources */,
+				C0E4317F1E67087400035118 /* LargeIntTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
