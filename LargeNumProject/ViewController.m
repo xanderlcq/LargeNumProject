@@ -14,6 +14,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    NSLog(@"%i",27%-5);
 //    LargeNumGenerator *gen = [[LargeNumGenerator alloc] init];
 //    LargeInt *test = [gen generateLargeIntWithLength:5];
 //    [test setDigitAt:0 withValue:9];

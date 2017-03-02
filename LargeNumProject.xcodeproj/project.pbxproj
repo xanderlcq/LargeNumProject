@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C0348CAF1E671A7D002EF43F /* AdditionBenchMark.m in Sources */ = {isa = PBXBuildFile; fileRef = C0348CAE1E671A7D002EF43F /* AdditionBenchMark.m */; };
 		C03E233E1E5340CC005BC4F8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C03E233D1E5340CC005BC4F8 /* AppDelegate.m */; };
 		C03E23411E5340CC005BC4F8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C03E23401E5340CC005BC4F8 /* main.m */; };
 		C03E23441E5340CC005BC4F8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C03E23431E5340CC005BC4F8 /* ViewController.m */; };
@@ -18,6 +19,11 @@
 		C074EC3B1E65BB42008B8BFD /* LarteIntCalculatorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C074EC3A1E65BB42008B8BFD /* LarteIntCalculatorTests.m */; };
 		C0BA4EA11E56DB84008A82D2 /* LargeIntCalculator.m in Sources */ = {isa = PBXBuildFile; fileRef = C0BA4EA01E56DB84008A82D2 /* LargeIntCalculator.m */; };
 		C0E4317F1E67087400035118 /* LargeIntTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C0E4317E1E67087400035118 /* LargeIntTests.m */; };
+		C0E7C7C81E67F304003B3A2C /* SubtractionBenchMark.m in Sources */ = {isa = PBXBuildFile; fileRef = C0E7C7C71E67F304003B3A2C /* SubtractionBenchMark.m */; };
+		C0E7C7CA1E67F315003B3A2C /* MultiplicationBenchMark.m in Sources */ = {isa = PBXBuildFile; fileRef = C0E7C7C91E67F315003B3A2C /* MultiplicationBenchMark.m */; };
+		C0E7C7CC1E67F33A003B3A2C /* DivisionBenchMark.m in Sources */ = {isa = PBXBuildFile; fileRef = C0E7C7CB1E67F33A003B3A2C /* DivisionBenchMark.m */; };
+		C0E7C7CE1E67F34A003B3A2C /* RemainderBenchMark.m in Sources */ = {isa = PBXBuildFile; fileRef = C0E7C7CD1E67F34A003B3A2C /* RemainderBenchMark.m */; };
+		C0E7C7D01E67F354003B3A2C /* FactorialBenchMark.m in Sources */ = {isa = PBXBuildFile; fileRef = C0E7C7CF1E67F354003B3A2C /* FactorialBenchMark.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C0348CAE1E671A7D002EF43F /* AdditionBenchMark.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AdditionBenchMark.m; path = ../AdditionBenchMark.m; sourceTree = "<group>"; };
 		C03E23391E5340CC005BC4F8 /* LargeNumProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LargeNumProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C03E233C1E5340CC005BC4F8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C03E233D1E5340CC005BC4F8 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -51,6 +58,11 @@
 		C0BA4E9F1E56DB84008A82D2 /* LargeIntCalculator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LargeIntCalculator.h; sourceTree = "<group>"; };
 		C0BA4EA01E56DB84008A82D2 /* LargeIntCalculator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LargeIntCalculator.m; sourceTree = "<group>"; };
 		C0E4317E1E67087400035118 /* LargeIntTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LargeIntTests.m; sourceTree = "<group>"; };
+		C0E7C7C71E67F304003B3A2C /* SubtractionBenchMark.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubtractionBenchMark.m; sourceTree = "<group>"; };
+		C0E7C7C91E67F315003B3A2C /* MultiplicationBenchMark.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MultiplicationBenchMark.m; sourceTree = "<group>"; };
+		C0E7C7CB1E67F33A003B3A2C /* DivisionBenchMark.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DivisionBenchMark.m; sourceTree = "<group>"; };
+		C0E7C7CD1E67F34A003B3A2C /* RemainderBenchMark.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RemainderBenchMark.m; sourceTree = "<group>"; };
+		C0E7C7CF1E67F354003B3A2C /* FactorialBenchMark.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FactorialBenchMark.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +136,12 @@
 			children = (
 				C0E4317E1E67087400035118 /* LargeIntTests.m */,
 				C074EC3A1E65BB42008B8BFD /* LarteIntCalculatorTests.m */,
+				C0348CAE1E671A7D002EF43F /* AdditionBenchMark.m */,
+				C0E7C7C71E67F304003B3A2C /* SubtractionBenchMark.m */,
+				C0E7C7C91E67F315003B3A2C /* MultiplicationBenchMark.m */,
+				C0E7C7CB1E67F33A003B3A2C /* DivisionBenchMark.m */,
+				C0E7C7CD1E67F34A003B3A2C /* RemainderBenchMark.m */,
+				C0E7C7CF1E67F354003B3A2C /* FactorialBenchMark.m */,
 				C03E23581E5340CC005BC4F8 /* Info.plist */,
 			);
 			path = LargeNumProjectTests;
@@ -247,7 +265,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				C074EC3B1E65BB42008B8BFD /* LarteIntCalculatorTests.m in Sources */,
+				C0E7C7CE1E67F34A003B3A2C /* RemainderBenchMark.m in Sources */,
 				C0E4317F1E67087400035118 /* LargeIntTests.m in Sources */,
+				C0E7C7C81E67F304003B3A2C /* SubtractionBenchMark.m in Sources */,
+				C0E7C7CA1E67F315003B3A2C /* MultiplicationBenchMark.m in Sources */,
+				C0E7C7CC1E67F33A003B3A2C /* DivisionBenchMark.m in Sources */,
+				C0348CAF1E671A7D002EF43F /* AdditionBenchMark.m in Sources */,
+				C0E7C7D01E67F354003B3A2C /* FactorialBenchMark.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -192,9 +192,6 @@
         return result;
     }
     
-    
-
-
     LargeInt *runTimeNumerator = [[LargeInt alloc] init];
     runTimeNumerator.data = (NSMutableArray *) [numerator.data subarrayWithRange:NSMakeRange([numerator length] - [denominator length], [denominator length])];
 
@@ -219,6 +216,9 @@
 }
 
 - (LargeInt *)factorial:(LargeInt *)num {
+    if(!num.isPositive){
+        [NSException raise:@"Cannot do factorial of negative number" format:@"Cannot do factorial of negative number"];
+    }
     LargeInt *counter = [[LargeInt alloc] initFromInt:1];
     LargeInt *result = [[LargeInt alloc] initFromInt:1];
     for (; [counter isLessThanOrEqualTo:num]; [self addOne:counter]) {

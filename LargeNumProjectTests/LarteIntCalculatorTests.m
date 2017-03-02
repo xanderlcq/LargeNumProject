@@ -40,6 +40,10 @@
     
 }
 
+-(void) testAddOne{
+    
+}
+
 -(void) testAddition{
     test1 = [[LargeInt alloc] initFromInt:123456789];
     test2 = [[LargeInt alloc] initFromInt:987654321];
@@ -186,18 +190,47 @@
     test2 = [[LargeInt alloc] initFromInt:123];
     result = [calc divide:test1 by:test2];
     XCTAssertTrue([result isEqual:[[LargeInt alloc] initFromInt:-1]]);
+    
+    test1 = [[LargeInt alloc] initFromInt:-27];
+    test2 = [[LargeInt alloc] initFromInt:5];
+    result = [calc divide:test1 by:test2];
+    XCTAssertTrue([result isEqual:[[LargeInt alloc] initFromInt:-5]]);
 }
 -(void) testMod{
+    test1 = [[LargeInt alloc] initFromInt:-270];
+    test2 = [[LargeInt alloc] initFromInt:50];
+    result = [calc remainder:test1 modBy:test2];
+    XCTAssertTrue([result isEqual:[[LargeInt alloc] initFromInt:-20]]);
+    
+    test1 = [[LargeInt alloc] initFromInt:270];
+    test2 = [[LargeInt alloc] initFromInt:50];
+    result = [calc remainder:test1 modBy:test2];
+    XCTAssertTrue([result isEqual:[[LargeInt alloc] initFromInt:20]]);
+    
+    test1 = [[LargeInt alloc] initFromInt:270];
+    test2 = [[LargeInt alloc] initFromInt:-50];
+    result = [calc remainder:test1 modBy:test2];
+    XCTAssertTrue([result isEqual:[[LargeInt alloc] initFromInt:20]]);
+    
+    test1 = [[LargeInt alloc] initFromInt:-270];
+    test2 = [[LargeInt alloc] initFromInt:-50];
+    result = [calc remainder:test1 modBy:test2];
+    XCTAssertTrue([result isEqual:[[LargeInt alloc] initFromInt:-20]]);
+    
+    test1 = [[LargeInt alloc] initFromInt:2780];
+    test2 = [[LargeInt alloc] initFromInt:2780];
+    result = [calc remainder:test1 modBy:test2];
+    XCTAssertTrue([result isEqual:[[LargeInt alloc] initFromInt:0]]);
+    
+    test1 = [[LargeInt alloc] initFromInt:278];
+    test2 = [[LargeInt alloc] initFromInt:2780];
+    result = [calc remainder:test1 modBy:test2];
+    XCTAssertTrue([result isEqual:[[LargeInt alloc] initFromInt:278]]);
     
 }
 -(void) testFactorial{
-    
+    test1 = [[LargeInt alloc] initFromInt:10];
+    result = [calc factorial:test1];
+    XCTAssertTrue([result isEqual:[[LargeInt alloc] initFromInt:3628800]]);
 }
-- (void)testPerformanceExample {
-    // This is an example of a performance test case.
-    [self measureBlock:^{
-        // Put the code you want to measure the time of here.
-    }];
-}
-
 @end
