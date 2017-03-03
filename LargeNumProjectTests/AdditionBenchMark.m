@@ -1,19 +1,19 @@
 //
-//  SubtractionBenchMark.m
+//  AdditionBenchMark.m
 //  LargeNumProject
 //
-//  Created by Xander on 3/2/17.
+//  Created by Xander on 3/1/17.
 //  Copyright © 2017 Xander. All rights reserved.
 //
 
 #import <XCTest/XCTest.h>
 #import "LargeIntCalculator.h"
 #import "LargeNumGenerator.h"
-@interface SubtractionBenchMark : XCTestCase
+@interface AdditionBenchMark : XCTestCase
 
 @end
 
-@implementation SubtractionBenchMark{
+@implementation AdditionBenchMark{
     LargeIntCalculator *calc;
     LargeInt *test1;
     LargeInt *test2;
@@ -46,49 +46,49 @@
 //    test1 = [gen generateLargeIntWithLength:1000];
 //    test2 = [gen generateLargeIntWithLength:1000];
 //    [self measureBlock:^{
-//        result = [calc subtract:test1 by:test2];
+//        result = [calc add:test1 and:test2];
 //    }];
 //}
 //- (void)test10000Dig {
 //    test1 = [gen generateLargeIntWithLength:10000];
 //    test2 = [gen generateLargeIntWithLength:10000];
 //    [self measureBlock:^{
-//        result = [calc subtract:test1 by:test2];
+//        result = [calc add:test1 and:test2];
 //    }];
 //}
 //- (void)test100000Dig {
 //    test1 = [gen generateLargeIntWithLength:100000];
 //    test2 = [gen generateLargeIntWithLength:100000];
 //    [self measureBlock:^{
-//        result = [calc subtract:test1 by:test2];
+//        result = [calc add:test1 and:test2];
 //    }];
 //}
 //- (void)test500000Dig {
 //    test1 = [gen generateLargeIntWithLength:500000];
 //    test2 = [gen generateLargeIntWithLength:500000];
 //    [self measureBlock:^{
-//        result = [calc subtract:test1 by:test2];
+//        result = [calc add:test1 and:test2];
 //    }];
 //}
 //- (void)test1000000Dig {
 //    test1 = [gen generateLargeIntWithLength:1000000];
 //    test2 = [gen generateLargeIntWithLength:1000000];
 //    [self measureBlock:^{
-//        result = [calc subtract:test1 by:test2];
+//        result = [calc add:test1 and:test2];
 //    }];
 //}
 //- (void)test10000000Dig {
 //    test1 = [gen generateLargeIntWithLength:10000000];
 //    test2 = [gen generateLargeIntWithLength:10000000];
 //    [self measureBlock:^{
-//        result = [calc subtract:test1 by:test2];
+//        result = [calc add:test1 and:test2];
 //    }];
 //}
 //- (void)test100000000Dig {
 //    test1 = [gen generateLargeIntWithLength:100000000];
 //    test2 = [gen generateLargeIntWithLength:100000000];
 //    [self measureBlock:^{
-//        result = [calc subtract:test1 by:test2];
+//        result = [calc add:test1 and:test2];
 //    }];
 //}
 

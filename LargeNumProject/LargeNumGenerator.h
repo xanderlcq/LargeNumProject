@@ -10,5 +10,14 @@
 #import "LargeInt.h"
 
 @interface LargeNumGenerator : NSObject
+
+
+/**
+ Generates a number with a given length
+
+ @param length Desired length
+
+ @return LargeInt with the given length
+ */
 - (LargeInt *)generateLargeIntWithLength:(unsigned long long int)length;
 @end
