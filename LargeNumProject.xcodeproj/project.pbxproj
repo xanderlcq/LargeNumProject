@@ -26,6 +26,18 @@
 		C0E7C7D21E67F456003B3A2C /* AdditionBenchMark.m in Sources */ = {isa = PBXBuildFile; fileRef = C0E7C7D11E67F456003B3A2C /* AdditionBenchMark.m */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXBuildRule section */
+		C09DC3171E69AE62000FB65F /* PBXBuildRule */ = {
+			isa = PBXBuildRule;
+			compilerSpec = com.apple.compilers.proxy.script;
+			fileType = sourcecode.metal;
+			isEditable = 1;
+			outputFiles = (
+			);
+			script = "# metal\n";
+		};
+/* End PBXBuildRule section */
+
 /* Begin PBXContainerItemProxy section */
 		C03E23531E5340CC005BC4F8 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -157,8 +169,10 @@
 				C03E23351E5340CB005BC4F8 /* Sources */,
 				C03E23361E5340CB005BC4F8 /* Frameworks */,
 				C03E23371E5340CB005BC4F8 /* Resources */,
+				C09DC3181E69AE72000FB65F /* Docs */,
 			);
 			buildRules = (
+				C09DC3171E69AE62000FB65F /* PBXBuildRule */,
 			);
 			dependencies = (
 			);
@@ -244,6 +258,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		C09DC3181E69AE72000FB65F /* Docs */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = Docs;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#if [ ${CONFIGURATION} == \"Release\" ]; then\nAPPLEDOC_PATH=`which appledoc`\nif [ $APPLEDOC_PATH ]; then\n$APPLEDOC_PATH \\\n--project-name ${PRODUCT_NAME} \\\n--project-company \"Xander Li\" \\\n--company-id \"Deerfield Academy\" \\\n--output ${PRODUCT_NAME}Docs \\\n--keep-undocumented-objects \\\n--keep-undocumented-members \\\n--keep-intermediate-files \\\n--no-repeat-first-par \\\n--no-warn-invalid-crossref \\\n--exit-threshold 2 \\\n${PROJECT_DIR}/${PRODUCT_NAME}\nfi;\n#fi;";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C03E23351E5340CB005BC4F8 /* Sources */ = {

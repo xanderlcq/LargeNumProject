@@ -12,12 +12,8 @@
 @interface LargeNumGenerator : NSObject
 
 
-/**
- Generates a number with a given length
+/** @name Section title */
 
- @param length Desired length
-
- @return LargeInt with the given length
- */
+/** Method description */
 - (LargeInt *)generateLargeIntWithLength:(unsigned long long int)length;
 @end

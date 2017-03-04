@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/LargeIntCalculator.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/LargeIntCalculator</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>LargeIntCalculator.h</DeclaredIn>
+            
+			
+			<NodeRef refid="3"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/LargeIntCalculator/add:and:</TokenIdentifier>
+			<Abstract type="html">Add number 1 and number 2 (number1 + number2)</Abstract>
+			<DeclaredIn>LargeIntCalculator.h</DeclaredIn>
+			
+			<Declaration>- (LargeInt *)add:(LargeInt *)num1 and:(LargeInt *)num2</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>num1</Name>
+					<Abstract type="html">number 1</Abstract>
+				</Parameter><Parameter>
+					<Name>num2</Name>
+					<Abstract type="html">number 2</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">Sum of number 1 and number 2</Abstract></ReturnValue>
+			<Anchor>//api/name/add:and:</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/LargeIntCalculator/subtract:by:</TokenIdentifier>
+			<Abstract type="html">Subtract number1 by number2 (number1 - number2)</Abstract>
+			<DeclaredIn>LargeIntCalculator.h</DeclaredIn>
+			
+			<Declaration>- (LargeInt *)subtract:(LargeInt *)num1 by:(LargeInt *)num2</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>num1</Name>
+					<Abstract type="html">number 1</Abstract>
+				</Parameter><Parameter>
+					<Name>num2</Name>
+					<Abstract type="html">number 2</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">The difference between number1 and number2</Abstract></ReturnValue>
+			<Anchor>//api/name/subtract:by:</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/LargeIntCalculator/addOne:</TokenIdentifier>
+			<Abstract type="html">Add one to the number (number++)</Abstract>
+			<DeclaredIn>LargeIntCalculator.h</DeclaredIn>
+			
+			<Declaration>- (void)addOne:(LargeInt *)num1</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>num1</Name>
+					<Abstract type="html">the number</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/addOne:</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/LargeIntCalculator/multiply:by:</TokenIdentifier>
+			<Abstract type="html">multiply number1 by number2 (number1 * number2)</Abstract>
+			<DeclaredIn>LargeIntCalculator.h</DeclaredIn>
+			
+			<Declaration>- (LargeInt *)multiply:(LargeInt *)num1 by:(LargeInt *)num2</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>num1</Name>
+					<Abstract type="html">number 1</Abstract>
+				</Parameter><Parameter>
+					<Name>num2</Name>
+					<Abstract type="html">number 2</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">The product of number1 and number2</Abstract></ReturnValue>
+			<Anchor>//api/name/multiply:by:</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/LargeIntCalculator/divide:by:</TokenIdentifier>
+			<Abstract type="html">Integer divide numerator by denominator (numerator / denominator)</Abstract>
+			<DeclaredIn>LargeIntCalculator.h</DeclaredIn>
+			
+			<Declaration>- (LargeInt *)divide:(LargeInt *)numerator by:(LargeInt *)denominator</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>numerator</Name>
+					<Abstract type="html">the numerator</Abstract>
+				</Parameter><Parameter>
+					<Name>denominator</Name>
+					<Abstract type="html">the denominator</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">Integer division quotient of numerator / denominator</Abstract></ReturnValue>
+			<Anchor>//api/name/divide:by:</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/LargeIntCalculator/remainder:modBy:</TokenIdentifier>
+			<Abstract type="html">Remainder of dividing numerator by denominator (numerator % denominator)</Abstract>
+			<DeclaredIn>LargeIntCalculator.h</DeclaredIn>
+			
+			<Declaration>- (LargeInt *)remainder:(LargeInt *)numerator modBy:(LargeInt *)denominator</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>numerator</Name>
+					<Abstract type="html">the numerator</Abstract>
+				</Parameter><Parameter>
+					<Name>denominator</Name>
+					<Abstract type="html">the denominator</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">Remainder of dividing numerator by denominator</Abstract></ReturnValue>
+			<Anchor>//api/name/remainder:modBy:</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/LargeIntCalculator/factorial:</TokenIdentifier>
+			<Abstract type="html">Returns the factorial of the number (number!)</Abstract>
+			<DeclaredIn>LargeIntCalculator.h</DeclaredIn>
+			
+			<Declaration>- (LargeInt *)factorial:(LargeInt *)num</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>num</Name>
+					<Abstract type="html">the number</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">the factorial of the number</Abstract></ReturnValue>
+			<Anchor>//api/name/factorial:</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/LargeIntCalculator/singleDigMultiply:mutiplyBy:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>LargeIntCalculator.m</DeclaredIn>
+			
+			<Declaration>- (LargeInt *)singleDigMultiply:(LargeInt *)num mutiplyBy:(int)factor</Declaration>
+			
+			
+			<Anchor>//api/name/singleDigMultiply:mutiplyBy:</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/LargeIntCalculator/singleDigQDivide:by:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>LargeIntCalculator.m</DeclaredIn>
+			
+			<Declaration>- (int)singleDigQDivide:(LargeInt *)numerator by:(LargeInt *)denominator</Declaration>
+			
+			
+			<Anchor>//api/name/singleDigQDivide:by:</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/LargeIntCalculator/assertEqualBase:hasSameBaseWith:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>LargeIntCalculator.m</DeclaredIn>
+			
+			<Declaration>- (void)assertEqualBase:(LargeInt *)num1 hasSameBaseWith:(LargeInt *)num2</Declaration>
+			
+			
+			<Anchor>//api/name/assertEqualBase:hasSameBaseWith:</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/LargeIntCalculator/enforceEqualLength:and:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>LargeIntCalculator.m</DeclaredIn>
+			
+			<Declaration>- (void)enforceEqualLength:(LargeInt *)num1 and:(LargeInt *)num2</Declaration>
+			
+			
+			<Anchor>//api/name/enforceEqualLength:and:</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+        
+        
+	</File>
+</Tokens>

@@ -1,0 +1,448 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/LargeInt.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/LargeInt</TokenIdentifier>
+			<Abstract type="html">This class demonstrates AppleDoc.</Abstract>
+			<DeclaredIn>LargeInt.h</DeclaredIn>
+            
+			
+			<NodeRef refid="2"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/LargeInt/setBase:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>LargeInt.h</DeclaredIn>
+			
+			<Declaration>@property int base</Declaration>
+			
+			
+			<Anchor>//api/name/base</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/LargeInt/base</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>LargeInt.h</DeclaredIn>
+			
+			<Declaration>@property int base</Declaration>
+			
+			
+			<Anchor>//api/name/base</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/LargeInt/base</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>LargeInt.h</DeclaredIn>
+			
+			<Declaration>@property int base</Declaration>
+			
+			
+			<Anchor>//api/name/base</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/LargeInt/setIsPositive:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>LargeInt.h</DeclaredIn>
+			
+			<Declaration>@property BOOL isPositive</Declaration>
+			
+			
+			<Anchor>//api/name/isPositive</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/LargeInt/isPositive</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>LargeInt.h</DeclaredIn>
+			
+			<Declaration>@property BOOL isPositive</Declaration>
+			
+			
+			<Anchor>//api/name/isPositive</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/LargeInt/isPositive</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>LargeInt.h</DeclaredIn>
+			
+			<Declaration>@property BOOL isPositive</Declaration>
+			
+			
+			<Anchor>//api/name/isPositive</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/LargeInt/setData:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>LargeInt.h</DeclaredIn>
+			
+			<Declaration>@property NSMutableArray *data</Declaration>
+			
+			
+			<Anchor>//api/name/data</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/LargeInt/data</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>LargeInt.h</DeclaredIn>
+			
+			<Declaration>@property NSMutableArray *data</Declaration>
+			
+			
+			<Anchor>//api/name/data</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/LargeInt/data</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>LargeInt.h</DeclaredIn>
+			
+			<Declaration>@property NSMutableArray *data</Declaration>
+			
+			
+			<Anchor>//api/name/data</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/LargeInt/init</TokenIdentifier>
+			<Abstract type="html">Initialize a LargeInt object with empty array (so the value is 0)</Abstract>
+			<DeclaredIn>LargeInt.h</DeclaredIn>
+			
+			<Declaration>- (id)init</Declaration>
+			
+			<ReturnValue><Abstract type="html">LargeInt object</Abstract></ReturnValue>
+			<Anchor>//api/name/init</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/LargeInt/initFromInt:</TokenIdentifier>
+			<Abstract type="html">Initialize a LargeInt object with the givin integer</Abstract>
+			<DeclaredIn>LargeInt.h</DeclaredIn>
+			
+			<Declaration>- (id)initFromInt:(int)num</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>num</Name>
+					<Abstract type="html">Initial number to initialize from</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">LargeInt object</Abstract></ReturnValue>
+			<Anchor>//api/name/initFromInt:</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/LargeInt/getDigitAt:</TokenIdentifier>
+			<Abstract type="html">Return the digit at a given index. (note that the least significant bit is at index 0)</Abstract>
+			<DeclaredIn>LargeInt.h</DeclaredIn>
+			
+			<Declaration>- (int)getDigitAt:(unsigned long long int)index</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>index</Name>
+					<Abstract type="html">Index of the digit you want to retrieve.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">Digit at the given index.</Abstract></ReturnValue>
+			<Anchor>//api/name/getDigitAt:</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/LargeInt/getMostSigPlace</TokenIdentifier>
+			<Abstract type="html">Return the most significant digit</Abstract>
+			<DeclaredIn>LargeInt.h</DeclaredIn>
+			
+			<Declaration>- (int)getMostSigPlace</Declaration>
+			
+			<ReturnValue><Abstract type="html">The most significant digit</Abstract></ReturnValue>
+			<Anchor>//api/name/getMostSigPlace</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/LargeInt/getLeastSigPlace</TokenIdentifier>
+			<Abstract type="html">Return the least significant digit</Abstract>
+			<DeclaredIn>LargeInt.h</DeclaredIn>
+			
+			<Declaration>- (int)getLeastSigPlace</Declaration>
+			
+			<ReturnValue><Abstract type="html">The least significant digit</Abstract></ReturnValue>
+			<Anchor>//api/name/getLeastSigPlace</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/LargeInt/shiftLeft:</TokenIdentifier>
+			<Abstract type="html">Shift the number certain place to the left. (Add given amount of zeros at the end)</Abstract>
+			<DeclaredIn>LargeInt.h</DeclaredIn>
+			
+			<Declaration>- (void)shiftLeft:(unsigned long long int)place</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>place</Name>
+					<Abstract type="html">Places you want to shift</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/shiftLeft:</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/LargeInt/setDigitAt:withValue:</TokenIdentifier>
+			<Abstract type="html">Set digit at given index</Abstract>
+			<DeclaredIn>LargeInt.h</DeclaredIn>
+			
+			<Declaration>- (void)setDigitAt:(unsigned long long int)index withValue:(int)value</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>index</Name>
+					<Abstract type="html">Index of the digit you want to set</Abstract>
+				</Parameter><Parameter>
+					<Name>value</Name>
+					<Abstract type="html">Value of the digit you want to set</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/setDigitAt:withValue:</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/LargeInt/insertDigitAtMostSigPlace:</TokenIdentifier>
+			<Abstract type="html">Insert a digit at most significant place</Abstract>
+			<DeclaredIn>LargeInt.h</DeclaredIn>
+			
+			<Declaration>- (void)insertDigitAtMostSigPlace:(int)value</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>value</Name>
+					<Abstract type="html">The value you want to insert</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/insertDigitAtMostSigPlace:</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/LargeInt/insertDigitAtLeastSigPlace:</TokenIdentifier>
+			<Abstract type="html">Insert a digit at least significant place</Abstract>
+			<DeclaredIn>LargeInt.h</DeclaredIn>
+			
+			<Declaration>- (void)insertDigitAtLeastSigPlace:(int)value</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>value</Name>
+					<Abstract type="html">The value you want to insert</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/insertDigitAtLeastSigPlace:</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/LargeInt/insertDigitAt:withValue:</TokenIdentifier>
+			<Abstract type="html">Insert a digit at a given index</Abstract>
+			<DeclaredIn>LargeInt.h</DeclaredIn>
+			
+			<Declaration>- (void)insertDigitAt:(unsigned long long int)index withValue:(int)value</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>index</Name>
+					<Abstract type="html">Index of where you want to insert</Abstract>
+				</Parameter><Parameter>
+					<Name>value</Name>
+					<Abstract type="html">The value you want to insert</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/insertDigitAt:withValue:</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/LargeInt/description</TokenIdentifier>
+			<Abstract type="html">Returns the number in a string</Abstract>
+			<DeclaredIn>LargeInt.h</DeclaredIn>
+			
+			<Declaration>- (NSString *)description</Declaration>
+			
+			<ReturnValue><Abstract type="html">The number in a string</Abstract></ReturnValue>
+			<Anchor>//api/name/description</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/LargeInt/copy</TokenIdentifier>
+			<Abstract type="html">Returns a deep copy of this number</Abstract>
+			<DeclaredIn>LargeInt.h</DeclaredIn>
+			
+			<Declaration>- (LargeInt *)copy</Declaration>
+			
+			<ReturnValue><Abstract type="html">Deep copied LargeInt</Abstract></ReturnValue>
+			<Anchor>//api/name/copy</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/LargeInt/length</TokenIdentifier>
+			<Abstract type="html">Returns the length (Number of digits) of this number</Abstract>
+			<DeclaredIn>LargeInt.h</DeclaredIn>
+			
+			<Declaration>- (unsigned long long int)length</Declaration>
+			
+			<ReturnValue><Abstract type="html">The length of this number</Abstract></ReturnValue>
+			<Anchor>//api/name/length</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/LargeInt/isZero</TokenIdentifier>
+			<Abstract type="html">Checks if this number is zero or not</Abstract>
+			<DeclaredIn>LargeInt.h</DeclaredIn>
+			
+			<Declaration>- (BOOL)isZero</Declaration>
+			
+			<ReturnValue><Abstract type="html">True if this number is zero</Abstract></ReturnValue>
+			<Anchor>//api/name/isZero</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/LargeInt/simplify</TokenIdentifier>
+			<Abstract type="html">Simplify the number. (Get rid off all the zeros in the front</Abstract>
+			<DeclaredIn>LargeInt.h</DeclaredIn>
+			
+			<Declaration>- (void)simplify</Declaration>
+			
+			
+			<Anchor>//api/name/simplify</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/LargeInt/zeroExtend:</TokenIdentifier>
+			<Abstract type="html">Zero extend the number to a given length without changing the value. (Add zeros in the front)</Abstract>
+			<DeclaredIn>LargeInt.h</DeclaredIn>
+			
+			<Declaration>- (void)zeroExtend:(unsigned long long int)length</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>length</Name>
+					<Abstract type="html">Desire length.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/zeroExtend:</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/LargeInt/isGreaterThan:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>LargeInt.m</DeclaredIn>
+			
+			<Declaration>- (BOOL)isGreaterThan:(id)object</Declaration>
+			
+			
+			<Anchor>//api/name/isGreaterThan:</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/LargeInt/isLessThan:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>LargeInt.m</DeclaredIn>
+			
+			<Declaration>- (BOOL)isLessThan:(id)object</Declaration>
+			
+			
+			<Anchor>//api/name/isLessThan:</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/LargeInt/isEqual:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>LargeInt.m</DeclaredIn>
+			
+			<Declaration>- (BOOL)isEqual:(id)object</Declaration>
+			
+			
+			<Anchor>//api/name/isEqual:</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/LargeInt/checkClass:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>LargeInt.m</DeclaredIn>
+			
+			<Declaration>- (void)checkClass:(id)object</Declaration>
+			
+			
+			<Anchor>//api/name/checkClass:</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/LargeInt/isEqualTo:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>LargeInt.m</DeclaredIn>
+			
+			<Declaration>- (BOOL)isEqualTo:(id)object</Declaration>
+			
+			
+			<Anchor>//api/name/isEqualTo:</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/LargeInt/isLessThanOrEqualTo:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>LargeInt.m</DeclaredIn>
+			
+			<Declaration>- (BOOL)isLessThanOrEqualTo:(id)object</Declaration>
+			
+			
+			<Anchor>//api/name/isLessThanOrEqualTo:</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/LargeInt/isGreaterThanOrEqualTo:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>LargeInt.m</DeclaredIn>
+			
+			<Declaration>- (BOOL)isGreaterThanOrEqualTo:(id)object</Declaration>
+			
+			
+			<Anchor>//api/name/isGreaterThanOrEqualTo:</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+        
+        
+	</File>
+</Tokens>
