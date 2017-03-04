@@ -42,10 +42,10 @@
     [super tearDown];
     
 }
-
+//Divide a number with length n by a number with length 3
 - (void)test10Dig {
     test1 = [gen generateLargeIntWithLength:10];
-    test2 = [gen generateLargeIntWithLength:10];
+    test2 = [gen generateLargeIntWithLength:3];
     [self measureBlock:^{
         result = [calc divide:test1 by:test2];
     }];
@@ -53,32 +53,32 @@
 
 - (void)test100Dig {
     test1 = [gen generateLargeIntWithLength:100];
-    test2 = [gen generateLargeIntWithLength:100];
+    test2 = [gen generateLargeIntWithLength:3];
     [self measureBlock:^{
         result = [calc divide:test1 by:test2];
     }];
 }
 - (void)test1000Dig {
     test1 = [gen generateLargeIntWithLength:1000];
-    test2 = [gen generateLargeIntWithLength:1000];
+    test2 = [gen generateLargeIntWithLength:3];
     [self measureBlock:^{
         result = [calc divide:test1 by:test2];
     }];
 }
 - (void)test10000Dig {
     test1 = [gen generateLargeIntWithLength:10000];
-    test2 = [gen generateLargeIntWithLength:10000];
+    test2 = [gen generateLargeIntWithLength:3];
     [self measureBlock:^{
         result = [calc divide:test1 by:test2];
     }];
 }
-//- (void)test100000Dig {
-//    test1 = [gen generateLargeIntWithLength:100000];
-//    test2 = [gen generateLargeIntWithLength:100000];
-//    [self measureBlock:^{
-//        result = [calc divide:test1 by:test2];
-//    }];
-//}
+- (void)test100000Dig {
+    test1 = [gen generateLargeIntWithLength:100000];
+    test2 = [gen generateLargeIntWithLength:3];
+    [self measureBlock:^{
+        result = [calc divide:test1 by:test2];
+    }];
+}
 //- (void)test500000Dig {
 //    test1 = [gen generateLargeIntWithLength:500000];
 //    test2 = [gen generateLargeIntWithLength:500000];
