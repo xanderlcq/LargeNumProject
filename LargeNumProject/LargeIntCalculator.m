@@ -179,7 +179,7 @@
     denominator.isPositive = YES;
     
     if ([denominator isZero]) {
-        [NSException raise:@"Cannot divide 0!" format:@"Cannot divide 0!"];
+        [NSException raise:@"Cannot divide by 0!" format:@"Cannot divide by 0!"];
         return nil;
     }
     if ([denominator isGreaterThan:numerator])

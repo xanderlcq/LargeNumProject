@@ -121,6 +121,18 @@
 		</Token>
 		
 		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/LargeInt/initFromString:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>LargeInt.h</DeclaredIn>
+			
+			<Declaration>- (id)initFromString:(NSString *)str</Declaration>
+			
+			
+			<Anchor>//api/name/initFromString:</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
 			<TokenIdentifier>//apple_ref/occ/instm/LargeInt/init</TokenIdentifier>
 			<Abstract type="html">Initialize a LargeInt object with empty array (so the value is 0)</Abstract>
 			<DeclaredIn>LargeInt.h</DeclaredIn>

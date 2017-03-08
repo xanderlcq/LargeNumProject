@@ -12,7 +12,7 @@
 @property int base;
 @property BOOL isPositive;
 @property NSMutableArray *data;
-
+- (id)initFromString:(NSString *)str;
 
 /**
  Initialize a LargeInt object with empty array (so the value is 0)

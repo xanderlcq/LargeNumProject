@@ -13,6 +13,294 @@
 		
 		
 		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/ViewController/setCalc:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>ViewController.h</DeclaredIn>
+			
+			<Declaration>@property LargeIntCalculator *calc</Declaration>
+			
+			
+			<Anchor>//api/name/calc</Anchor>
+            <NodeRef refid="5"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/ViewController/calc</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>ViewController.h</DeclaredIn>
+			
+			<Declaration>@property LargeIntCalculator *calc</Declaration>
+			
+			
+			<Anchor>//api/name/calc</Anchor>
+            <NodeRef refid="5"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/ViewController/calc</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>ViewController.h</DeclaredIn>
+			
+			<Declaration>@property LargeIntCalculator *calc</Declaration>
+			
+			
+			<Anchor>//api/name/calc</Anchor>
+            <NodeRef refid="5"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/ViewController/setNum1:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>ViewController.h</DeclaredIn>
+			
+			<Declaration>@property LargeInt *num1</Declaration>
+			
+			
+			<Anchor>//api/name/num1</Anchor>
+            <NodeRef refid="5"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/ViewController/num1</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>ViewController.h</DeclaredIn>
+			
+			<Declaration>@property LargeInt *num1</Declaration>
+			
+			
+			<Anchor>//api/name/num1</Anchor>
+            <NodeRef refid="5"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/ViewController/num1</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>ViewController.h</DeclaredIn>
+			
+			<Declaration>@property LargeInt *num1</Declaration>
+			
+			
+			<Anchor>//api/name/num1</Anchor>
+            <NodeRef refid="5"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/ViewController/setNum2:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>ViewController.h</DeclaredIn>
+			
+			<Declaration>@property LargeInt *num2</Declaration>
+			
+			
+			<Anchor>//api/name/num2</Anchor>
+            <NodeRef refid="5"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/ViewController/num2</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>ViewController.h</DeclaredIn>
+			
+			<Declaration>@property LargeInt *num2</Declaration>
+			
+			
+			<Anchor>//api/name/num2</Anchor>
+            <NodeRef refid="5"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/ViewController/num2</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>ViewController.h</DeclaredIn>
+			
+			<Declaration>@property LargeInt *num2</Declaration>
+			
+			
+			<Anchor>//api/name/num2</Anchor>
+            <NodeRef refid="5"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/ViewController/setNum1Input:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>ViewController.h</DeclaredIn>
+			
+			<Declaration>@property (weak) IBOutlet NSTextField *num1Input</Declaration>
+			
+			
+			<Anchor>//api/name/num1Input</Anchor>
+            <NodeRef refid="5"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/ViewController/num1Input</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>ViewController.h</DeclaredIn>
+			
+			<Declaration>@property (weak) IBOutlet NSTextField *num1Input</Declaration>
+			
+			
+			<Anchor>//api/name/num1Input</Anchor>
+            <NodeRef refid="5"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/ViewController/num1Input</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>ViewController.h</DeclaredIn>
+			
+			<Declaration>@property (weak) IBOutlet NSTextField *num1Input</Declaration>
+			
+			
+			<Anchor>//api/name/num1Input</Anchor>
+            <NodeRef refid="5"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/ViewController/setNum2Input:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>ViewController.h</DeclaredIn>
+			
+			<Declaration>@property (weak) IBOutlet NSTextField *num2Input</Declaration>
+			
+			
+			<Anchor>//api/name/num2Input</Anchor>
+            <NodeRef refid="5"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/ViewController/num2Input</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>ViewController.h</DeclaredIn>
+			
+			<Declaration>@property (weak) IBOutlet NSTextField *num2Input</Declaration>
+			
+			
+			<Anchor>//api/name/num2Input</Anchor>
+            <NodeRef refid="5"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/ViewController/num2Input</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>ViewController.h</DeclaredIn>
+			
+			<Declaration>@property (weak) IBOutlet NSTextField *num2Input</Declaration>
+			
+			
+			<Anchor>//api/name/num2Input</Anchor>
+            <NodeRef refid="5"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/ViewController/addButton:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>ViewController.h</DeclaredIn>
+			
+			<Declaration>- (IBAction)addButton:(id)sender</Declaration>
+			
+			
+			<Anchor>//api/name/addButton:</Anchor>
+            <NodeRef refid="5"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/ViewController/minusButton:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>ViewController.h</DeclaredIn>
+			
+			<Declaration>- (IBAction)minusButton:(id)sender</Declaration>
+			
+			
+			<Anchor>//api/name/minusButton:</Anchor>
+            <NodeRef refid="5"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/ViewController/modButton:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>ViewController.h</DeclaredIn>
+			
+			<Declaration>- (IBAction)modButton:(id)sender</Declaration>
+			
+			
+			<Anchor>//api/name/modButton:</Anchor>
+            <NodeRef refid="5"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/ViewController/multiplyButton:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>ViewController.h</DeclaredIn>
+			
+			<Declaration>- (IBAction)multiplyButton:(id)sender</Declaration>
+			
+			
+			<Anchor>//api/name/multiplyButton:</Anchor>
+            <NodeRef refid="5"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/ViewController/divideButton:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>ViewController.h</DeclaredIn>
+			
+			<Declaration>- (IBAction)divideButton:(id)sender</Declaration>
+			
+			
+			<Anchor>//api/name/divideButton:</Anchor>
+            <NodeRef refid="5"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/ViewController/facButton:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>ViewController.h</DeclaredIn>
+			
+			<Declaration>- (IBAction)facButton:(id)sender</Declaration>
+			
+			
+			<Anchor>//api/name/facButton:</Anchor>
+            <NodeRef refid="5"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/ViewController/setResultOutlet:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>ViewController.h</DeclaredIn>
+			
+			<Declaration>@property (weak) IBOutlet NSTextField *resultOutlet</Declaration>
+			
+			
+			<Anchor>//api/name/resultOutlet</Anchor>
+            <NodeRef refid="5"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/ViewController/resultOutlet</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>ViewController.h</DeclaredIn>
+			
+			<Declaration>@property (weak) IBOutlet NSTextField *resultOutlet</Declaration>
+			
+			
+			<Anchor>//api/name/resultOutlet</Anchor>
+            <NodeRef refid="5"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/ViewController/resultOutlet</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>ViewController.h</DeclaredIn>
+			
+			<Declaration>@property (weak) IBOutlet NSTextField *resultOutlet</Declaration>
+			
+			
+			<Anchor>//api/name/resultOutlet</Anchor>
+            <NodeRef refid="5"/>
+		</Token>
+		
+		<Token>
 			<TokenIdentifier>//apple_ref/occ/instm/ViewController/viewDidLoad</TokenIdentifier>
 			<Abstract type="html"></Abstract>
 			<DeclaredIn>ViewController.m</DeclaredIn>
@@ -33,6 +321,30 @@
 			
 			
 			<Anchor>//api/name/setRepresentedObject:</Anchor>
+            <NodeRef refid="5"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/ViewController/calculate:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>ViewController.m</DeclaredIn>
+			
+			<Declaration>- (void)calculate:(int)opCode</Declaration>
+			
+			
+			<Anchor>//api/name/calculate:</Anchor>
+            <NodeRef refid="5"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/ViewController/isAllDigit:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>ViewController.m</DeclaredIn>
+			
+			<Declaration>- (BOOL)isAllDigit:(NSString *)str</Declaration>
+			
+			
+			<Anchor>//api/name/isAllDigit:</Anchor>
             <NodeRef refid="5"/>
 		</Token>
 		

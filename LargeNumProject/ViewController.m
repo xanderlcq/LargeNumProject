@@ -14,121 +14,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    NSLog(@"%i",27%-5);
-//    LargeNumGenerator *gen = [[LargeNumGenerator alloc] init];
-//    LargeInt *test = [gen generateLargeIntWithLength:5];
-//    [test setDigitAt:0 withValue:9];
-//    LargeInt *og = [test copy];
-//    LargeIntCalculator *calc = [[LargeIntCalculator alloc] init];
-//    [calc addOne:test];
-//    
-//    LargeInt *test3 = [[LargeInt alloc] init];
-//    [test3 simplify];
-//
-//    NSLog(@"%@ + 1 = %@",og,test);
-//    
-//    
-//    
-//    
-//    
-//    NSLog(@"=======addition========");
-//    LargeInt *test1 = [gen generateLargeIntWithLength:15];
-//    LargeInt *test2 = [gen generateLargeIntWithLength:10];
-//   
-//    LargeInt *addResult = [calc add:test1 and:test2];
-//    NSLog(@"%@",test1);
-//    NSLog(@"+");
-//    NSLog(@"%@",test2);
-//    NSLog(@"=");
-//    NSLog(@"%@",addResult);
-//    
-//    NSLog(@"=======Single dig multiply========");
-//    test1 = [gen generateLargeIntWithLength:5];
-//    int factor = 7;
-//    LargeInt *result = [calc singleDigMultiply:test1 mutiplyBy:factor];
-//    NSLog(@"%@",test1);
-//    NSLog(@"*");
-//    NSLog(@"%i",factor);
-//    NSLog(@"=");
-//    NSLog(@"%@",result);
-//    
-//    NSLog(@"=======shifting========");
-//    test1 = [gen generateLargeIntWithLength:5];
-//    int shifting = 5;
-//    NSLog(@"%@",test1);
-//    [test1 shiftLeft:shifting];
-//    NSLog(@"*");
-//    NSLog(@"shift left: %i spaces",shifting);
-//    NSLog(@"=");
-//    NSLog(@"%@",test1);
-//
-//    NSLog(@"=======multiply========");
-//    test1 = [gen generateLargeIntWithLength:54];
-//    test2 = [gen generateLargeIntWithLength:24];
-//    
-//    result = [calc multiply:test1 by:test2];
-//    NSLog(@"%@",test1);
-//    NSLog(@"*");
-//    NSLog(@"%@",test2);
-//    NSLog(@"=");
-//    NSLog(@"%@",result);
-//    
-//    NSLog(@"=======comparison========");
-//    test1 = [[LargeInt alloc] initFromInt:12345];
-//    test2 = [[LargeInt alloc] initFromInt:12345];
-//    NSLog(@"%@ compare to %@",test1,test2);
-//    NSLog(@"%hhd",[test1 isEqual:test2]);
-//    NSLog(@"%hhd",[test1 isLessThan:test2]);
-//    NSLog(@"%hhd",[test1 isGreaterThan:test2]);
-//    NSLog(@"%hhd",[test1 isLessThanOrEqualTo:test2]);
-//    NSLog(@"%hhd",[test1 isGreaterThanOrEqualTo:test2]);
-//    test1 = [[LargeInt alloc] initFromInt:12345];
-//    test2 = [[LargeInt alloc] initFromInt:324];
-//    NSLog(@"%@ compare to %@",test1,test2);
-//    NSLog(@"%hhd",[test1 isEqual:test2]);
-//    NSLog(@"%hhd",[test1 isLessThan:test2]);
-//    NSLog(@"%hhd",[test1 isGreaterThan:test2]);
-//    NSLog(@"%hhd",[test1 isLessThanOrEqualTo:test2]);
-//    NSLog(@"%hhd",[test1 isGreaterThanOrEqualTo:test2]);
-//    
-//    test1 = [[LargeInt alloc] initFromInt:234];
-//    test2 = [[LargeInt alloc] initFromInt:12345];
-//    NSLog(@"%@ compare to %@",test1,test2);
-//    NSLog(@"%hhd",[test1 isEqual:test2]);
-//    NSLog(@"%hhd",[test1 isLessThan:test2]);
-//    NSLog(@"%hhd",[test1 isGreaterThan:test2]);
-//    NSLog(@"%hhd",[test1 isLessThanOrEqualTo:test2]);
-//    NSLog(@"%hhd",[test1 isGreaterThanOrEqualTo:test2]);
-//    
-//    test1 = [[LargeInt alloc] init];
-//    test2 = [[LargeInt alloc] init];
-//    NSLog(@"%@ compare to %@",test1,test2);
-//    NSLog(@"%hhd",[test1 isEqual:test2]);
-//    NSLog(@"%hhd",[test1 isLessThan:test2]);
-//    NSLog(@"%hhd",[test1 isGreaterThan:test2]);
-//    NSLog(@"%hhd",[test1 isLessThanOrEqualTo:test2]);
-//    NSLog(@"%hhd",[test1 isGreaterThanOrEqualTo:test2]);
-//    
-//    NSLog(@"=======divide========");
-//    test1 = [gen generateLargeIntWithLength:6];
-//    test2 = [gen generateLargeIntWithLength:3];
-//    NSLog(@"numerator: %@",test1);
-//    NSLog(@"/");
-//    NSLog(@"denominator: %@",test2);
-//    
-//    
-//    result = [calc divide:test1 by:test2];
-//
-//    NSLog(@"=");
-//    NSLog(@"%@",result);
-//    
-//    NSLog(@"=======Factorial========");
-//    
-//    test1 = [[LargeInt alloc] initFromInt:2];
-//    NSLog(@"Factorial: %@",test1);
-//    result = [calc factorial:test1];
-//    NSLog(@"%@",result);
-    // Do any additional setup after loading the view.
+    self.calc = [[LargeIntCalculator alloc] init];
+    LargeInt *test = [[LargeInt alloc] initFromString:@"12345"];
+    NSLog(@"%@",test);
+
 }
 
 
@@ -139,4 +28,82 @@
 }
 
 
+- (IBAction)addButton:(id)sender {
+    [self calculate:1];
+}
+
+- (IBAction)minusButton:(id)sender {
+     [self calculate:2];
+}
+- (IBAction)modButton:(id)sender {
+     [self calculate:5];
+}
+
+- (IBAction)multiplyButton:(id)sender {
+     [self calculate:3];
+}
+
+- (IBAction)divideButton:(id)sender {
+     [self calculate:4];
+}
+
+- (IBAction)facButton:(id)sender {
+     [self calculate:6];
+}
+-(void) calculate:(int) opCode{
+    @try{
+    LargeInt *result;
+    if(opCode == 6){
+        if([self isAllDigit:[self.num1Input stringValue]]){
+            LargeInt *num1 = [[LargeInt alloc] initFromString:[self.num1Input stringValue]];
+            result = [self.calc factorial:num1];
+            [self.resultOutlet setStringValue:[result description]];
+            return;
+        }
+    }
+    if(
+    [self isAllDigit:[self.num1Input stringValue]]&&
+       [self isAllDigit:[self.num2Input stringValue]]){
+        LargeInt *num1 = [[LargeInt alloc] initFromString:[self.num1Input stringValue]];
+        LargeInt *num2 = [[LargeInt alloc] initFromString:[self.num2Input stringValue]];
+        switch (opCode) {
+            case 1:
+                result = [self.calc add:num1 and:num2];
+                break;
+            case 2:
+                result = [self.calc subtract:num1 by:num2];
+                break;
+            case 3:
+                result = [self.calc multiply:num1 by:num2];
+                break;
+            case 4:
+                result = [self.calc divide:num1 by:num2];
+                break;
+            case 5:
+                result = [self.calc remainder:num1 modBy:num2];
+                break;
+
+            default:
+                break;
+        }
+        [self.resultOutlet setStringValue:[result description]];
+        return;
+    }else{
+        [self.resultOutlet setStringValue:@"invalid input"];
+    }
+    }@catch (NSException *exception){
+        [self.resultOutlet setStringValue:[NSString stringWithFormat:@"Exception name: %@, Details: %@",exception.name,exception.reason]];
+        
+    }
+    
+    
+}
+-(BOOL) isAllDigit:(NSString *) str{
+    NSCharacterSet* notDigits = [[NSCharacterSet decimalDigitCharacterSet] invertedSet];
+    if ([str rangeOfCharacterFromSet:notDigits].location == NSNotFound)
+    {
+        return YES;
+    }
+    return NO;
+}
 @end

@@ -21,8 +21,6 @@
 		C0E4317F1E67087400035118 /* LargeIntTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C0E4317E1E67087400035118 /* LargeIntTests.m */; };
 		C0E7C7CA1E67F315003B3A2C /* MultiplicationBenchMark.m in Sources */ = {isa = PBXBuildFile; fileRef = C0E7C7C91E67F315003B3A2C /* MultiplicationBenchMark.m */; };
 		C0E7C7CC1E67F33A003B3A2C /* DivisionBenchMark.m in Sources */ = {isa = PBXBuildFile; fileRef = C0E7C7CB1E67F33A003B3A2C /* DivisionBenchMark.m */; };
-		C0E7C7CE1E67F34A003B3A2C /* RemainderBenchMark.m in Sources */ = {isa = PBXBuildFile; fileRef = C0E7C7CD1E67F34A003B3A2C /* RemainderBenchMark.m */; };
-		C0E7C7D01E67F354003B3A2C /* FactorialBenchMark.m in Sources */ = {isa = PBXBuildFile; fileRef = C0E7C7CF1E67F354003B3A2C /* FactorialBenchMark.m */; };
 		C0E7C7D21E67F456003B3A2C /* AdditionBenchMark.m in Sources */ = {isa = PBXBuildFile; fileRef = C0E7C7D11E67F456003B3A2C /* AdditionBenchMark.m */; };
 /* End PBXBuildFile section */
 
@@ -72,8 +70,6 @@
 		C0E4317E1E67087400035118 /* LargeIntTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LargeIntTests.m; sourceTree = "<group>"; };
 		C0E7C7C91E67F315003B3A2C /* MultiplicationBenchMark.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MultiplicationBenchMark.m; sourceTree = "<group>"; };
 		C0E7C7CB1E67F33A003B3A2C /* DivisionBenchMark.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DivisionBenchMark.m; sourceTree = "<group>"; };
-		C0E7C7CD1E67F34A003B3A2C /* RemainderBenchMark.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RemainderBenchMark.m; sourceTree = "<group>"; };
-		C0E7C7CF1E67F354003B3A2C /* FactorialBenchMark.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FactorialBenchMark.m; sourceTree = "<group>"; };
 		C0E7C7D11E67F456003B3A2C /* AdditionBenchMark.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdditionBenchMark.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -152,8 +148,6 @@
 				C0DCAB361E67F6BE00D62298 /* SubtractionBenchMark.m */,
 				C0E7C7C91E67F315003B3A2C /* MultiplicationBenchMark.m */,
 				C0E7C7CB1E67F33A003B3A2C /* DivisionBenchMark.m */,
-				C0E7C7CD1E67F34A003B3A2C /* RemainderBenchMark.m */,
-				C0E7C7CF1E67F354003B3A2C /* FactorialBenchMark.m */,
 				C03E23581E5340CC005BC4F8 /* Info.plist */,
 			);
 			path = LargeNumProjectTests;
@@ -296,13 +290,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				C074EC3B1E65BB42008B8BFD /* LarteIntCalculatorTests.m in Sources */,
-				C0E7C7CE1E67F34A003B3A2C /* RemainderBenchMark.m in Sources */,
 				C0DCAB371E67F6BE00D62298 /* SubtractionBenchMark.m in Sources */,
 				C0E4317F1E67087400035118 /* LargeIntTests.m in Sources */,
 				C0E7C7CA1E67F315003B3A2C /* MultiplicationBenchMark.m in Sources */,
 				C0E7C7D21E67F456003B3A2C /* AdditionBenchMark.m in Sources */,
 				C0E7C7CC1E67F33A003B3A2C /* DivisionBenchMark.m in Sources */,
-				C0E7C7D01E67F354003B3A2C /* FactorialBenchMark.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

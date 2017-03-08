@@ -165,6 +165,12 @@
                     <Anchor>tasks</Anchor>
                 </Node>
                 
+                <Node type="section">
+                    <Path>Classes/ViewController.html</Path>
+                    <Name>Properties</Name>
+                    <Anchor>properties</Anchor>
+                </Node>
+                
                 
                 
                 <Node type="section">

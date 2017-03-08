@@ -19,7 +19,19 @@
     }
     return self;
 }
-
+- (id)initFromString:(NSString *)str{
+    self = [super init];
+    if (self) {
+        self.data = [[NSMutableArray alloc] init];
+        self.base = 10;
+        self.isPositive = YES;
+        for(int i  = 0; i < [str length]; i ++){
+            int dig = [[str substringWithRange:(NSMakeRange(i, 1))] intValue];
+            [self insertDigitAtLeastSigPlace:dig];
+        }
+    }
+    return self;
+}
 - (id)initFromInt:(int)num {
     self = [super init];
     if (self) {
@@ -117,7 +129,11 @@
     if ([self length] == 0)
         return @"0";
     NSEnumerator *en = [self.data reverseObjectEnumerator];
-    return [[en allObjects] componentsJoinedByString:@""];
+    NSString *returning =  [[en allObjects] componentsJoinedByString:@""];
+    if(!self.isPositive){
+        return [@"-" stringByAppendingString:returning];
+    }
+    return returning;
 }
 
 - (BOOL)isGreaterThan:(id)object {
